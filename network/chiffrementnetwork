@@ -72,9 +72,7 @@ Authentification par certificats ou PSK
 apt install strongswan
 # Configuration dans /etc/ipsec.conf et /etc/ipsec.secrets
 ⚡ WireGuard (recommandé, moderne)
-bash
-Copier
-Modifier
+
 # Installation
 apt install wireguard
 wg genkey | tee privatekey | wg pubkey > publickey
@@ -111,9 +109,7 @@ powershell
 Set-SmbServerConfiguration -EncryptData $true
 🔍 6. Tests et vérifications
 🔧 Tester un port sécurisé (OpenSSL)
-bash
-Copier
-Modifier
+
 openssl s_client -connect example.com:443
 🧪 Scanner la sécurité SSL/TLS
 SSL Labs
@@ -123,9 +119,7 @@ Outils CLI :
 
 nmap --script ssl-enum-ciphers -p 443 example.com
 🔐 Vérifier la validité d’un certificat
-bash
-Copier
-Modifier
+
 openssl x509 -in server.crt -text -noout
 📦 7. Bonnes pratiques
 🔄 Renouveler les certificats tous les 6–12 mois
