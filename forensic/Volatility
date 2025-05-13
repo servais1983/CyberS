@@ -1,0 +1,145 @@
+# 🧠 Volatility - Analyse Forensique de la Mémoire
+
+## 📌 Qu'est-ce que Volatility ?
+
+**Volatility** est un framework open-source destiné à l’analyse de la mémoire volatile (RAM) d’un système informatique. Il permet aux enquêteurs forensiques de :
+- Extraire des informations sensibles (processus, connexions réseau, DLL, etc.)
+- Analyser les traces d’un logiciel malveillant
+- Déterminer l’état d’un système à un moment donné
+
+Volatility est indépendant du système d’exploitation de l’hôte et peut analyser des images mémoire de **Windows, Linux, macOS**, etc.
+
+Il existe deux principales versions :
+- **Volatility 2.x** (Python 2, plus utilisée mais moins maintenue)
+- **Volatility 3** (Python 3, réécriture complète avec une meilleure structure modulaire)
+
+---
+
+## ⚙️ Installation
+
+### Volatility 2.x (Linux)
+```bash
+git clone https://github.com/volatilityfoundation/volatility.git
+cd volatility
+python2 vol.py -h
+Volatility 3 (Linux ou Windows)
+bash
+Copier
+Modifier
+git clone https://github.com/volatilityfoundation/volatility3.git
+cd volatility3
+python3 vol.py -h
+🧠 Formats de fichiers supportés
+.raw (dump brut)
+
+.mem, .lime (Linux)
+
+.vmem (VMware)
+
+.dmp / .hiberfil.sys (Windows)
+
+.elf, .core, .crash (Linux)
+
+🔍 Commandes générales (Volatility 3)
+bash
+Copier
+Modifier
+python3 vol.py -f <fichier_memoire> windows.info
+python3 vol.py -f <fichier_memoire> -p <profile> <plugin>
+🪟 Modules Volatility pour Windows
+🔧 Informations système
+windows.info — Infos sur l’OS, version, build, etc.
+
+windows.pslist — Liste des processus actifs
+
+windows.pstree — Arborescence des processus
+
+windows.psscan — Recherche de processus (inclus processus cachés)
+
+windows.modules — Liste des modules chargés
+
+📂 Fichiers et registres
+windows.filescan — Recherche de fichiers en mémoire
+
+windows.registry.printkey — Affiche une clé de registre
+
+windows.registry.hivescan — Recherche de hives en mémoire
+
+windows.registry.hivelist — Liste des hives
+
+🌐 Réseau
+windows.netscan — Connexions réseau et sockets (TCP/UDP)
+
+🔐 Mots de passe et utilisateurs
+windows.hashdump — Dump des mots de passe NTLM
+
+windows.lsadump — Extraction des secrets du LSA
+
+🧟 Détection de malwares
+windows.malfind — Recherche d’injections de code
+
+windows.ssdt — Analyse de la SSDT (rootkits)
+
+windows.callbacks — Vérifie les callbacks suspects
+
+🐧 Modules Volatility pour Linux
+🔧 Informations système
+linux_banner — Version du kernel
+
+linux_pslist — Liste des processus
+
+linux_pstree — Arborescence des processus
+
+linux_psaux — Processus avec arguments
+
+linux_proc_maps — Cartographie mémoire d’un processus
+
+linux_cpuinfo — Infos CPU
+
+📂 Fichiers et modules
+linux_lsmod — Liste des modules noyau
+
+linux_check_afinfo — Vérifie les fonctions socket
+
+linux_find_file — Recherche de fichiers en mémoire
+
+🔒 Sécurité et utilisateurs
+linux_bash — Affiche les historiques Bash
+
+linux_passwd — Montre les utilisateurs et leurs mots de passe
+
+linux_shadow_hashes — Dump des hashes depuis /etc/shadow
+
+🌐 Réseau
+linux_netstat — Ports et connexions
+
+linux_ifconfig — Interfaces réseau
+
+📘 Exemples de commandes
+bash
+Copier
+Modifier
+# Windows - Liste des processus
+python3 vol.py -f win10.raw windows.pslist
+
+# Windows - Recherche de rootkits via malfind
+python3 vol.py -f win10.raw windows.malfind
+
+# Linux - Affiche l’historique bash
+python3 vol.py -f linux.lime linux_bash
+
+# Linux - Liste les processus
+python3 vol.py -f linux.lime linux_pslist
+🛠 Astuces
+Toujours utiliser windows.psscan en plus de pslist pour détecter les processus cachés.
+
+Utiliser malfind pour détecter les injections en mémoire.
+
+Combinez hivelist + printkey pour explorer les clés de registre.
+
+📚 Liens utiles
+Site officiel : https://www.volatilityfoundation.org/
+
+Repo GitHub Volatility 3 : https://github.com/volatilityfoundation/volatility3
+
+Profils Linux avec LiME : https://github.com/504ensicsLabs/LiME
