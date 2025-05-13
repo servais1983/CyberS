@@ -23,8 +23,7 @@
 [AGENTS] ---> [WAZUH MANAGER] ---> [FILEBEAT] ---> [OPENSEARCH] ---> [DASHBOARD]
 
 yaml
-Copier
-Modifier
+
 
 ---
 
@@ -44,9 +43,7 @@ curl -sO https://packages.wazuh.com/4.7/wazuh-install.sh
 sudo bash wazuh-install.sh -a
 📡 Déploiement d’un agent
 Agent Linux
-bash
-Copier
-Modifier
+
 curl -sO https://packages.wazuh.com/4.7/wazuh-agent.sh
 sudo bash wazuh-agent.sh -a --manager_ip <IP_MANAGER>
 Agent Windows
@@ -57,6 +54,8 @@ msiexec.exe /i wazuh-agent-4.x.x.msi /quiet
 # Configurer ossec.conf
 C:\Program Files (x86)\ossec-agent\agent-auth.exe -m <IP_MANAGER>
 net start wazuh-agent
+
+
 🧠 3. Configuration
 📁 Fichier de configuration
 /var/ossec/etc/ossec.conf (manager)
@@ -65,8 +64,7 @@ C:\Program Files (x86)\ossec-agent\ossec.conf (agent)
 
 🔍 Exemples de modules activables
 xml
-Copier
-Modifier
+
 <rootcheck>
   <disabled>no</disabled>
 </rootcheck>
@@ -83,13 +81,12 @@ Modifier
   </localfile>
 </logcollector>
 📡 Enregistrement manuel d’un agent
-bash
-Copier
-Modifier
+
 /var/ossec/bin/manage_agents
 # Ajouter un agent
 # Extraire la clé
 # L’importer sur le poste client
+
 🔍 4. Analyse de Logs & Détection
 📊 Dashboards
 OpenSearch Dashboards via https://<IP>:5601 ou https://<IP>:443
@@ -123,14 +120,11 @@ Active Directory	Authentification	Surveillance des logs d’authentification
 
 🧪 6. Test & Simulation
 📌 Simulation de brute force SSH
-bash
-Copier
-Modifier
+
 for i in {1..10}; do ssh wronguser@localhost; done
+
 📌 Création d’un fichier critique
-bash
-Copier
-Modifier
+
 touch /etc/shadow.bak
 Vérifiez ensuite les alertes dans le dashboard ou /var/ossec/logs/alerts/alerts.json
 
@@ -147,17 +141,14 @@ Chiffrement des logs au repos (via OpenSearch config)
 
 🧰 8. Commandes Utiles
 🔍 Diagnostic et logs
-bash
-Copier
-Modifier
+
 /var/ossec/bin/agent_control -l           # Liste des agents
 /var/ossec/bin/ossec-logtest              # Test de règles
 tail -f /var/ossec/logs/ossec.log         # Log général
 tail -f /var/ossec/logs/alerts/alerts.json # Alertes en temps réel
+
 🔄 Redémarrage des services
-bash
-Copier
-Modifier
+
 systemctl restart wazuh-manager
 systemctl restart wazuh-agent
 🧼 9. Maintenance & Supervision
@@ -169,9 +160,7 @@ Mensuel	Vérifier les mises à jour Wazuh / OS
 Trimestriel	Faire une sauvegarde complète de la config
 
 🧾 Sauvegarde de la config
-bash
-Copier
-Modifier
+
 tar -czvf wazuh-backup.tar.gz /var/ossec
 📘 10. Annexes & Références
 🔗 Documentation officielle Wazuh
