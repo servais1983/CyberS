@@ -248,3 +248,111 @@ go
 Copier
 Modifier
 
+
+## 🔐 Extraction des mots de passe avec `hashdump` (Volatility)
+
+### ❓ Qu’est-ce que `hashdump` ?
+
+La commande `hashdump` permet d’extraire les **hashs NTLM** des mots de passe des comptes utilisateurs Windows à partir d’une image mémoire.
+
+Ces hashs peuvent ensuite être :
+- Comparés à des dictionnaires (attaque par dictionnaire)
+- Bruts (attaque par force brute)
+- Crackés via des outils comme `john`, `hashcat`, etc.
+
+---
+
+### 📦 Fichiers nécessaires en mémoire
+
+Pour que `hashdump` fonctionne, Volatility doit **trouver et charger deux hives** dans la mémoire :
+- `SAM` — Contient les comptes utilisateurs
+- `SYSTEM` — Contient la clé d’obfuscation nécessaire pour déchiffrer les hashs
+
+---
+
+### 🔧 Syntaxe générale (Volatility 3)
+
+```bash
+python3 vol.py -f <image_memoire> windows.hashdump
+Volatility 3 détecte automatiquement les profils et les hives requis. Pas besoin de spécifier le profil contrairement à Volatility 2.
+
+⚠️ Avec Volatility 2
+Syntaxe :
+bash
+Copier
+Modifier
+python2 vol.py -f <image_memoire> --profile=<profil_windows> hashdump
+Exemples de profils :
+Win7SP1x64
+
+Win10x64_19041
+
+Exemple complet :
+bash
+Copier
+Modifier
+python2 vol.py -f memdump.raw --profile=Win7SP1x64 hashdump
+📋 Exemple de sortie hashdump
+text
+Copier
+Modifier
+Administrator:500:aad3b435b51404eeaad3b435b51404ee:31d6cfe0d16ae931b73c59d7e0c089c0:::
+Guest:501:aad3b435b51404eeaad3b435b51404ee:31d6cfe0d16ae931b73c59d7e0c089c0:::
+User1:1001:aad3b435b51404eeaad3b435b51404ee:f1b7f8d2566c8e3ef2ddc99a9f7a17b3:::
+Structure :
+ruby
+Copier
+Modifier
+nom_utilisateur:RID:LM_hash:NTLM_hash:::
+LM_hash : Ancienne méthode de hash (souvent désactivée aujourd'hui)
+
+NTLM_hash : Hash réel du mot de passe Windows
+
+🛠 Que faire avec ces hashs ?
+Utiliser hashcat
+bash
+Copier
+Modifier
+hashcat -m 1000 hash.txt rockyou.txt
+Utiliser john
+bash
+Copier
+Modifier
+john --format=nt hash.txt --wordlist=rockyou.txt
+🔍 Étapes de vérification (optionnel)
+Si hashdump échoue, il est conseillé de :
+
+Lister les hives avec hivelist :
+
+bash
+Copier
+Modifier
+python3 vol.py -f memdump.raw windows.registry.hivelist
+Vérifier que SAM et SYSTEM sont présents.
+
+🧠 Autres modules liés aux mots de passe
+windows.lsadump — Extrait les secrets du LSA (tokens, clés DPAPI, etc.)
+
+windows.cachedump — Hashed mots de passe en cache (utiles en cas de déconnexion)
+
+✅ Résumé des commandes
+Volatility 3 (recommandé)
+bash
+Copier
+Modifier
+python3 vol.py -f memdump.raw windows.hashdump
+Volatility 2 (avec profil)
+bash
+Copier
+Modifier
+python2 vol.py -f memdump.raw --profile=Win7SP1x64 hashdump
+🔐 Recommandation
+Toujours coupler hashdump avec lsadump et hivelist pour faire une analyse complète de la sécurité des identifiants.
+
+yaml
+Copier
+Modifier
+
+---
+
+
