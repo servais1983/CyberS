@@ -117,8 +117,7 @@ netsh advfirewall firewall delete rule name="Allow HTTPS"
 netsh advfirewall firewall show rule name=all
 🧠 PowerShell (Windows 10+ recommandé) :
 powershell
-Copier
-Modifier
+
 # Lister les règles
 Get-NetFirewallRule
 
@@ -126,9 +125,7 @@ Get-NetFirewallRule
 New-NetFirewallRule -DisplayName "Allow SSH" -Direction Inbound -LocalPort 22 -Protocol TCP -Action Allow
 🐧 Sous Linux (UFW / iptables / firewalld)
 🧩 UFW (Uncomplicated Firewall) – Ubuntu/Debian
-bash
-Copier
-Modifier
+
 # Activer UFW
 sudo ufw enable
 
@@ -144,9 +141,7 @@ sudo ufw status numbered
 # Supprimer une règle
 sudo ufw delete [numéro de la règle]
 🔧 iptables – Bas niveau, très flexible
-bash
-Copier
-Modifier
+
 # Voir les règles actuelles
 sudo iptables -L -v -n
 
@@ -159,9 +154,7 @@ sudo iptables -A INPUT -p tcp --dport 80 -j ACCEPT
 # Sauvegarder les règles (Debian/Ubuntu)
 sudo iptables-save > /etc/iptables/rules.v4
 🔥 firewalld – Red Hat / CentOS / Fedora
-bash
-Copier
-Modifier
+
 # Démarrer et activer firewalld
 sudo systemctl start firewalld
 sudo systemctl enable firewalld
