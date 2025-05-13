@@ -32,7 +32,7 @@ Assurer la **confidentialité**, l'**intégrité** et l'**authenticité** des co
 
 ### 🔐 Génération de certificats auto-signés
 
-```bash
+
 # Autorité racine (Root CA)
 openssl genrsa -out rootCA.key 4096
 openssl req -x509 -new -key rootCA.key -sha256 -days 3650 -out rootCA.crt
@@ -45,8 +45,7 @@ openssl x509 -req -in server.csr -CA rootCA.crt -CAkey rootCA.key -CAcreateseria
 
 🕸️ Serveur Web (Nginx – HTTPS)
 nginx
-Copier
-Modifier
+
 server {
   listen 443 ssl;
   server_name secure.example.com;
@@ -69,9 +68,7 @@ Compatible avec pare-feux, routeurs
 
 Authentification par certificats ou PSK
 
-bash
-Copier
-Modifier
+
 apt install strongswan
 # Configuration dans /etc/ipsec.conf et /etc/ipsec.secrets
 ⚡ WireGuard (recommandé, moderne)
@@ -88,9 +85,7 @@ Ultra rapide, simple à configurer
 Chiffrement via ChaCha20-Poly1305
 
 🌍 OpenVPN
-bash
-Copier
-Modifier
+
 apt install openvpn easy-rsa
 make-cadir /etc/openvpn/easy-rsa
 # Génération des clés + fichiers .ovpn
@@ -100,9 +95,7 @@ Clés RSA/ECDSA/ED25519 obligatoires
 
 Interdire root, password :
 
-bash
-Copier
-Modifier
+
 PermitRootLogin no
 PasswordAuthentication no
 🖥️ RDP
@@ -114,8 +107,7 @@ Activer NLA (Network Level Authentication)
 Utiliser SMB v3 avec chiffrement :
 
 powershell
-Copier
-Modifier
+
 Set-SmbServerConfiguration -EncryptData $true
 🔍 6. Tests et vérifications
 🔧 Tester un port sécurisé (OpenSSL)
@@ -128,9 +120,7 @@ SSL Labs
 
 Outils CLI :
 
-bash
-Copier
-Modifier
+
 nmap --script ssl-enum-ciphers -p 443 example.com
 🔐 Vérifier la validité d’un certificat
 bash
