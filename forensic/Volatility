@@ -18,14 +18,12 @@ Il existe deux principales versions :
 ## ⚙️ Installation
 
 ### Volatility 2.x (Linux)
-```bash
+
 git clone https://github.com/volatilityfoundation/volatility.git
 cd volatility
 python2 vol.py -h
 Volatility 3 (Linux ou Windows)
-bash
-Copier
-Modifier
+
 git clone https://github.com/volatilityfoundation/volatility3.git
 cd volatility3
 python3 vol.py -h
@@ -41,9 +39,7 @@ python3 vol.py -h
 .elf, .core, .crash (Linux)
 
 🔍 Commandes générales (Volatility 3)
-bash
-Copier
-Modifier
+
 python3 vol.py -f <fichier_memoire> windows.info
 python3 vol.py -f <fichier_memoire> -p <profile> <plugin>
 🪟 Modules Volatility pour Windows
@@ -116,9 +112,7 @@ linux_netstat — Ports et connexions
 linux_ifconfig — Interfaces réseau
 
 📘 Exemples de commandes
-bash
-Copier
-Modifier
+
 # Windows - Liste des processus
 python3 vol.py -f win10.raw windows.pslist
 
@@ -167,7 +161,7 @@ Le **registre Windows** contient une énorme quantité d'informations sur le sys
 #### `windows.registry.printkey`
 - **But** : Affiche le contenu d'une **clé spécifique** dans le registre.
 - **Usage** :
-  ```bash
+
   python3 vol.py -f win10.raw windows.registry.printkey --key "Software\\Microsoft\\Windows\\CurrentVersion\\Run"
 Utilité :
 
@@ -183,29 +177,22 @@ Utilité : Révéler les habitudes d’utilisation d’un utilisateur
 🧪 Exemple de Workflow : Analyse du registre
 Lister les hives disponibles
 
-bash
-Copier
-Modifier
+
 python3 vol.py -f win10.raw windows.registry.hivelist
 Résultat attendu :
 
 pgsql
-Copier
-Modifier
+
 Virtual            Physical           Name
 0xfffff8a000022000 0x122000           \SystemRoot\System32\Config\SYSTEM
 0xfffff8a000070000 0x170000           \??\C:\Users\User\ntuser.dat
 Explorer une clé du registre SYSTEM
 
-bash
-Copier
-Modifier
+
 python3 vol.py -f win10.raw windows.registry.printkey --key "Select" --hive-offset 0xfffff8a000022000
 Explorer les programmes lancés au démarrage d’un utilisateur
 
-bash
-Copier
-Modifier
+
 python3 vol.py -f win10.raw windows.registry.printkey --key "Software\\Microsoft\\Windows\\CurrentVersion\\Run" --hive-offset 0xfffff8a000070000
 📂 Types de hives utiles
 Hive	Contenu principal
@@ -223,15 +210,11 @@ Les valeurs comme Run, LastVisitedMRU, TypedURLs ou MountPoints2 révèlent souv
 📘 Exemple avancé : Extraction du SID utilisateur
 Identifier le hive SAM :
 
-bash
-Copier
-Modifier
+
 python3 vol.py -f win10.raw windows.registry.hivelist
 Extraire les utilisateurs :
 
-bash
-Copier
-Modifier
+
 python3 vol.py -f win10.raw windows.registry.printkey --key "SAM\\Domains\\Account\\Users\\Names" --hive-offset 0xfffff8a000034000
 Cela donne les noms d'utilisateurs et permet d'aller plus loin pour récupérer les SID ou analyser les droits associés.
 
@@ -245,8 +228,7 @@ Révéler les utilisateurs actifs
 Identifier les logiciels malveillants configurés pour se relancer
 
 go
-Copier
-Modifier
+
 
 
 ## 🔐 Extraction des mots de passe avec `hashdump` (Volatility)
@@ -272,15 +254,12 @@ Pour que `hashdump` fonctionne, Volatility doit **trouver et charger deux hives*
 
 ### 🔧 Syntaxe générale (Volatility 3)
 
-```bash
 python3 vol.py -f <image_memoire> windows.hashdump
 Volatility 3 détecte automatiquement les profils et les hives requis. Pas besoin de spécifier le profil contrairement à Volatility 2.
 
 ⚠️ Avec Volatility 2
 Syntaxe :
-bash
-Copier
-Modifier
+
 python2 vol.py -f <image_memoire> --profile=<profil_windows> hashdump
 Exemples de profils :
 Win7SP1x64
@@ -288,21 +267,17 @@ Win7SP1x64
 Win10x64_19041
 
 Exemple complet :
-bash
-Copier
-Modifier
+
 python2 vol.py -f memdump.raw --profile=Win7SP1x64 hashdump
 📋 Exemple de sortie hashdump
 text
-Copier
-Modifier
+
 Administrator:500:aad3b435b51404eeaad3b435b51404ee:31d6cfe0d16ae931b73c59d7e0c089c0:::
 Guest:501:aad3b435b51404eeaad3b435b51404ee:31d6cfe0d16ae931b73c59d7e0c089c0:::
 User1:1001:aad3b435b51404eeaad3b435b51404ee:f1b7f8d2566c8e3ef2ddc99a9f7a17b3:::
 Structure :
 ruby
-Copier
-Modifier
+
 nom_utilisateur:RID:LM_hash:NTLM_hash:::
 LM_hash : Ancienne méthode de hash (souvent désactivée aujourd'hui)
 
@@ -310,23 +285,17 @@ NTLM_hash : Hash réel du mot de passe Windows
 
 🛠 Que faire avec ces hashs ?
 Utiliser hashcat
-bash
-Copier
-Modifier
+
 hashcat -m 1000 hash.txt rockyou.txt
 Utiliser john
-bash
-Copier
-Modifier
+
 john --format=nt hash.txt --wordlist=rockyou.txt
 🔍 Étapes de vérification (optionnel)
 Si hashdump échoue, il est conseillé de :
 
 Lister les hives avec hivelist :
 
-bash
-Copier
-Modifier
+
 python3 vol.py -f memdump.raw windows.registry.hivelist
 Vérifier que SAM et SYSTEM sont présents.
 
@@ -337,21 +306,16 @@ windows.cachedump — Hashed mots de passe en cache (utiles en cas de déconnexi
 
 ✅ Résumé des commandes
 Volatility 3 (recommandé)
-bash
-Copier
-Modifier
+
 python3 vol.py -f memdump.raw windows.hashdump
 Volatility 2 (avec profil)
-bash
-Copier
-Modifier
+
 python2 vol.py -f memdump.raw --profile=Win7SP1x64 hashdump
 🔐 Recommandation
 Toujours coupler hashdump avec lsadump et hivelist pour faire une analyse complète de la sécurité des identifiants.
 
 yaml
-Copier
-Modifier
+
 
 ---
 
