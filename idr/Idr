@@ -1,8 +1,7 @@
 
 
 markdown
-Copier
-Modifier
+
 # 🚨 Guide Complet – IDR (Incident Detection & Response) en Entreprise
 
 ## 🎯 Objectif
@@ -63,16 +62,13 @@ Accès : https://[IP]:5601 (via Kibana)
 
 Agent Wazuh – Windows
 powershell
-Copier
-Modifier
+
 msiexec.exe /i wazuh-agent-4.x.x.msi /quiet
 # Configurer ossec.conf, puis
 agent-auth.exe -m [IP_SERVEUR]
 net start wazuh-agent
 Agent Wazuh – Linux
-bash
-Copier
-Modifier
+
 curl -sO https://packages.wazuh.com/4.7/wazuh-agent.sh
 sudo bash wazuh-agent.sh -a --manager_ip [IP_SERVEUR]
 🔍 3. Surveillance et Détection
@@ -96,8 +92,7 @@ SIEM	Graylog, ELK, Splunk, LogPoint
 💻 4. Commandes Utiles – Détection & Analyse
 🪟 Windows
 powershell
-Copier
-Modifier
+
 netstat -ano                    # Connexions réseau
 tasklist /v                    # Processus détaillés
 query user                     # Utilisateurs connectés
@@ -105,8 +100,7 @@ schtasks /query /fo LIST /v    # Tâches planifiées
 Get-EventLog -LogName Security -Newest 100
 🐧 Linux
 bash
-Copier
-Modifier
+
 ss -tunap                      # Connexions réseau
 ps aux --sort=-%cpu           # Processus actifs
 who / w                       # Utilisateurs connectés
@@ -131,15 +125,12 @@ Documenter et alerter le RSSI / DSI
 🧰 Commandes de réponse rapide
 Windows
 powershell
-Copier
-Modifier
+
 taskkill /PID 1234 /F
 net user utilisateur /active:no
 wevtutil epl Security C:\incident\logs.evtx
 Linux
-bash
-Copier
-Modifier
+
 kill -9 [PID]
 usermod -L utilisateur
 tar -czvf logs.tar.gz /var/log
