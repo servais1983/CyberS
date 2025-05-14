@@ -318,5 +318,94 @@ yaml
 
 
 ---
+# 🧠 Analyse mémoire avec Volatility sous Linux
 
+Ce guide présente pas à pas comment utiliser **Volatility 2** pour analyser un dump mémoire (`memdump.mem`) à l’aide de commandes de base : vérification, identification de profil, processus actifs, et connexions réseau.
+
+---
+
+## ✅ Étape 1 – Voir les commandes disponibles
+
+Commencez par afficher l’aide pour explorer les plugins disponibles :
+
+
+volatility -h
+Cela liste tous les plugins disponibles (pslist, netscan, dlllist, etc.) ainsi que les options générales.
+
+🔍 Étape 2 – Identifier le profil mémoire
+Avant toute analyse, il faut identifier le profil (profil kernel) à utiliser pour votre image mémoire :
+
+
+volatility -f memdump.mem imageinfo
+🔎 Cette commande affiche :
+
+Les profils suggérés (ex: Win7SP1x64, Win10x64_18362, etc.)
+
+L’horodatage du système au moment de la capture
+
+Le type de système détecté (Windows/Linux)
+
+➡️ Choisis le profil le plus probable dans la liste retournée.
+
+🧠 Étape 3 – Lister les processus en cours
+Utilise le profil identifié pour extraire la liste des processus actifs avec leurs métadonnées :
+
+
+volatility -f memdump.mem --profile=NomDuProfil pslist
+Exemple :
+
+
+volatility -f memdump.mem --profile=Win7SP1x64 pslist
+🔹 Cette commande fournit :
+
+PID / PPID
+
+Nom du processus
+
+Date/Heure de lancement
+
+Nombre de threads/handles
+
+🎯 Rechercher les anomalies :
+
+Noms de processus suspects ou déguisés (svchost.exe, explorer.exe hors contexte)
+
+Processus sans parent (PPID incohérent)
+
+Horodatages anormaux ou postérieurs à l'heure système
+
+🌐 Étape 4 – Analyser les connexions réseau
+Utilisez le plugin netscan pour extraire les connexions réseau actives (TCP/UDP) au moment du dump :
+
+
+volatility -f memdump.mem --profile=NomDuProfil netscan
+Cette commande retourne :
+
+PID associé à chaque connexion
+
+Adresse locale / distante
+
+Port
+
+État de la connexion (LISTENING, ESTABLISHED, etc.)
+
+🔎 À surveiller :
+
+Connexions vers des IP externes non connues
+
+Processus inconnus établissant des connexions réseau
+
+Ports non standard
+
+🧩 Astuces supplémentaires
+Ajouter > resultat.txt à vos commandes pour exporter les résultats dans un fichier texte.
+
+Croiser pslist avec netscan pour identifier quels processus communiquent avec l’extérieur.
+
+Utiliser ensuite dlllist, cmdline, ou malfind pour explorer un processus suspect.
+
+📘 Références
+Volatility GitHub (v2)
+
+Cheat Sheet officielle Volatility
 
