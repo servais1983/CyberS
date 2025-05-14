@@ -404,8 +404,87 @@ Croiser pslist avec netscan pour identifier quels processus communiquent avec l�
 
 Utiliser ensuite dlllist, cmdline, ou malfind pour explorer un processus suspect.
 
+
+# 🔍 Analyse avancée mémoire avec Volatility
+
+Cette section complète l’analyse de base avec des **plugins plus poussés** pour détecter du code malveillant et extraire les exécutables suspects.
+
+---
+
+## 🌲 Étape 5 – Arbre des processus (`pstree`)
+
+Affiche l’**arborescence des processus** (parent/enfant), utile pour repérer des processus qui ne devraient pas exister ou sont lancés par des processus légitimes.
+
+```bash
+volatility -f memdump.mem --profile=Win7SP1x64 pstree
+🔎 À surveiller :
+
+Processus enfants anormaux (ex: cmd.exe lancé par explorer.exe)
+
+Hiérarchie incohérente ou vide
+
+Double instance de services critiques
+
+🧬 Étape 6 – Détection de code malveillant en mémoire (malfind)
+Détecte les zones de mémoire exécutables non légitimes (ex: injection, reflective DLL, shellcode) utilisées souvent par les malwares.
+
+
+volatility -f memdump.mem --profile=Win7SP1x64 malfind
+🔍 Cette commande affiche :
+
+PID du processus concerné
+
+Adresse mémoire suspecte
+
+Dump hexadécimal et aperçu du code ASM
+
+Signature de l’injection
+
+🎯 Cibler un processus spécifique
+Pour analyser un processus précis avec malfind, ajoute l’option -p suivie du PID :
+
+
+volatility -f memdump.mem --profile=Win7SP1x64 malfind -p 1234
+Cela limite l’analyse et accélère les résultats.
+
+💣 Étape 7 – Extraire un exécutable en mémoire (procdump)
+Ce plugin permet de dumpez un processus entier depuis la mémoire, utile pour l’analyser avec un antivirus ou dans un sandbox.
+
+
+volatility -f memdump.mem --profile=Win7SP1x64 procdump -p 1234 --dump-dir=procdump/
+📁 Cela crée un fichier .exe du processus dans le dossier procdump/.
+
+✅ Bonnes pratiques :
+
+Toujours analyser les fichiers extraits avec VirusTotal, Hybrid Analysis ou IDA/Ghidra
+
+Croiser avec les résultats de malfind, pstree, cmdline, etc.
+
+🛠️ Étapes suivantes recommandées
+dlllist -p <PID> : pour lister les DLL chargées par un processus
+
+cmdline -p <PID> : pour voir comment le processus a été lancé
+
+handles -p <PID> : objets (fichiers, clés de registre, etc.) utilisés
+
+getsids -p <PID> : SID associés pour vérifier les permissions
+
+📘 Références
+Volatility Plugin Reference
+
+Analyse de malware en mémoire
+
+yaml
+
+
+
+
+
 📘 Références
 Volatility GitHub (v2)
 
 Cheat Sheet officielle Volatility
+
+
+
 
