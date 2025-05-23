@@ -1,4 +1,4 @@
-# SPLUNK SPL COMMANDS - BLUE TEAM & FIDR
+# SPLUNK SPL COMMANDS - BLUE TEAM & FIDR (V2 AMÉLIORÉE)
 
 ## Sommaire
 
@@ -10,137 +10,88 @@
 6. [Requêtes d'investigation](#requêtes-dinvestigation)
 7. [Recherches sur les logs Windows](#recherches-sur-les-logs-windows)
 8. [Cas d'usage FIDR](#cas-dusage-fidr)
+9. [Détection MITRE ATT\&CK](#détection-mitre-attck)
+10. [Dashboards recommandés](#dashboards-recommandés)
+11. [Templates de Dashboards Splunk](#templates-de-dashboards-splunk)
 
----
+...
 
-## Commandes de base
+## Templates de Dashboards Splunk
 
-```spl
-index=<nom_index>                # Spécifie l'index
-sourcetype=<nom_sourcetype>     # Spécifie le type de source
-source=<chemin_source>          # Source spécifique
-host=<nom_hôte>                 # Filtre par hôte
-```
+### 🎯 Dashboard : Surveillances Authentification (Windows Logon)
 
----
-
-## Recherches temporelles
+* **Panel 1** : `Tentatives échouées`
 
 ```spl
-index=win_logs earliest=-24h latest=now   # Recherches sur les dernières 24h
-timechart span=1h count by host           # Histogramme horaire par hôte
+index=windows EventCode=4625 | timechart span=1h count by user
 ```
 
----
-
-## Filtres et conditions
+* **Panel 2** : `Tentatives réussies`
 
 ```spl
-index=firewall action=blocked
-index=windows EventCode=4625 OR EventCode=4624
-index=sysmon (EventCode=1 OR EventCode=3) AND Image="cmd.exe"
+index=windows EventCode=4624 | timechart span=1h count by user
 ```
 
----
-
-## Statistiques et agrégations
+* **Panel 3** : `Type de Logon suspects`
 
 ```spl
-stats count by src_ip
-stats dc(user) by src_ip
-stats avg(response_time) by uri_path
+index=windows EventCode=4624 LogonType!=2 AND LogonType!=10 | stats count by LogonType
 ```
 
----
+### 🧠 Dashboard : Activité PowerShell
 
-## Visualisation
+* **Panel 1** : `Commandes PowerShell encodées`
 
 ```spl
-timechart count by EventCode
-chart count over dest_ip by action
+index=sysmon EventCode=1 | where like(CommandLine, "%EncodedCommand%") | timechart span=1h count
 ```
 
----
-
-## Requêtes d'investigation
+* **Panel 2** : `Scripts Invoke suspects`
 
 ```spl
-# Connexions RDP
-index=windows EventCode=4624 LogonType=10
-
-# Tentatives de bruteforce
-index=windows EventCode=4625 | stats count by user, src_ip
-
-# Processus suspects (Sysmon)
-index=sysmon EventCode=1 | where Image="powershell.exe" OR CommandLine="*Invoke*"
-
-# DNS Tunneling
-index=dns_logs | stats count by query | where like(query, "%\_%")
-
-# Accès anormaux fichiers sensibles
-index=fs_logs path="*confidential*" | stats count by user, file
+index=sysmon EventCode=1 | search CommandLine="*Invoke*" | stats count by CommandLine
 ```
 
----
+### 🌍 Dashboard : Activité réseau externe
 
-## Recherches sur les logs Windows
+* **Panel 1** : `Connexions sortantes par destination`
 
 ```spl
-# Création de compte
-index=windows EventCode=4720
-
-# Suppression de compte
-index=windows EventCode=4726
-
-# Ajout à un groupe admin
-index=windows EventCode=4728 OR EventCode=4732
-
-# Suppression de journaux (potentielle couverture de trace)
-index=windows EventCode=1102
+index=firewall OR index=sysmon EventCode=3 | stats count by dest_ip
 ```
 
----
+* **Panel 2** : `Taux de DNS long ou anormal`
 
-## Cas d'usage FIDR
+```spl
+index=dns_logs | eval qlen=len(query) | where qlen > 50 | timechart span=1h count
+```
 
-### 1. Exfiltration de données
+### 🛡️ Dashboard : Sécurité des Comptes
+
+* **Panel 1** : `Création de comptes`
+
+```spl
+index=windows EventCode=4720 | timechart span=1h count by user
+```
+
+* **Panel 2** : `Ajout aux groupes admin`
+
+```spl
+index=windows EventCode=4728 OR EventCode=4732 | stats count by user, GroupName
+```
+
+### 📦 Dashboard : Exfiltration/DLP
+
+* **Panel 1** : `Téléchargements de gros fichiers compressés`
 
 ```spl
 index=proxy_logs uri="*.zip" OR uri="*.rar" OR uri="*.7z" | stats count by src_ip, uri
 ```
 
-### 2. Lateral Movement - SMB
+* **Panel 2** : `Transferts DNS suspects`
 
 ```spl
-index=sysmon EventCode=3 DestinationPort=445 | stats count by src_ip, dest_ip
-```
-
-### 3. Exécution de scripts PowerShell
-
-```spl
-index=sysmon EventCode=1 | where Image="powershell.exe" OR CommandLine="*EncodedCommand*"
-```
-
-### 4. Scheduled Tasks malicieux
-
-```spl
-index=windows EventCode=4698 | stats count by TaskName, user
-```
-
-### 5. Beaconing à intervalle régulier
-
-```spl
-index=proxy_logs | timechart span=1m count by src_ip | streamstats avg(count) as avg_count | where count == avg_count
+index=dns_logs | where like(query, "%_%") OR len(query)>50 | timechart span=30m count by query
 ```
 
 ---
-
-**Note :** adaptez les noms d'index et champs à votre environnement Splunk.
-
----
-
-## Ressources utiles
-
-* [Documentation SPL officielle](https://docs.splunk.com/Documentation/Splunk/latest/SearchReference/Whatsinthismanual)
-* [Cheat Sheet SPL](https://docs.splunk.com/images/e/e8/Splunk_Quick_Reference_Guide.pdf)
-* [Blue Team Cheat Sheets (GitHub)](https://github.com)
