@@ -1,17 +1,17 @@
-# SPLUNK SPL COMMANDS - BLUE TEAM & FIDR (V2 AMÉLIORÉE)
+# SPLUNK SPL COMMANDS - BLUE TEAM & FIDR (V2 AMELIOREE)
 
 ## Sommaire
 
 1. [Commandes de base](#commandes-de-base)
 2. [Recherches temporelles](#recherches-temporelles)
 3. [Filtres et conditions](#filtres-et-conditions)
-4. [Statistiques et agrégations](#statistiques-et-agrégations)
+4. [Statistiques et agregations](#statistiques-et-agregations)
 5. [Visualisation](#visualisation)
-6. [Requêtes d'investigation](#requêtes-dinvestigation)
+6. [Requetes investigation](#requetes-investigation)
 7. [Recherches sur les logs Windows](#recherches-sur-les-logs-windows)
 8. [Cas d'usage FIDR](#cas-dusage-fidr)
-9. [Détection MITRE ATT\&CK](#détection-mitre-attck)
-10. [Dashboards recommandés](#dashboards-recommandés)
+9. [Detection MITRE ATTCK](#detection-mitre-attck)
+10. [Dashboards recommandes](#dashboards-recommandes)
 11. [Templates de Dashboards Splunk](#templates-de-dashboards-splunk)
 
 ...
@@ -20,13 +20,13 @@
 
 ### 🎯 Dashboard : Surveillances Authentification (Windows Logon)
 
-* **Panel 1** : `Tentatives échouées`
+* **Panel 1** : `Tentatives echouees`
 
 ```spl
 index=windows EventCode=4625 | timechart span=1h count by user
 ```
 
-* **Panel 2** : `Tentatives réussies`
+* **Panel 2** : `Tentatives reussies`
 
 ```spl
 index=windows EventCode=4624 | timechart span=1h count by user
@@ -38,9 +38,9 @@ index=windows EventCode=4624 | timechart span=1h count by user
 index=windows EventCode=4624 LogonType!=2 AND LogonType!=10 | stats count by LogonType
 ```
 
-### 🧠 Dashboard : Activité PowerShell
+### 🧠 Dashboard : Activite PowerShell
 
-* **Panel 1** : `Commandes PowerShell encodées`
+* **Panel 1** : `Commandes PowerShell encodees`
 
 ```spl
 index=sysmon EventCode=1 | where like(CommandLine, "%EncodedCommand%") | timechart span=1h count
@@ -52,7 +52,7 @@ index=sysmon EventCode=1 | where like(CommandLine, "%EncodedCommand%") | timecha
 index=sysmon EventCode=1 | search CommandLine="*Invoke*" | stats count by CommandLine
 ```
 
-### 🌍 Dashboard : Activité réseau externe
+### 🌍 Dashboard : Activite reseau externe
 
 * **Panel 1** : `Connexions sortantes par destination`
 
@@ -66,9 +66,9 @@ index=firewall OR index=sysmon EventCode=3 | stats count by dest_ip
 index=dns_logs | eval qlen=len(query) | where qlen > 50 | timechart span=1h count
 ```
 
-### 🛡️ Dashboard : Sécurité des Comptes
+### 🛡️ Dashboard : Securite des Comptes
 
-* **Panel 1** : `Création de comptes`
+* **Panel 1** : `Creation de comptes`
 
 ```spl
 index=windows EventCode=4720 | timechart span=1h count by user
@@ -82,7 +82,7 @@ index=windows EventCode=4728 OR EventCode=4732 | stats count by user, GroupName
 
 ### 📦 Dashboard : Exfiltration/DLP
 
-* **Panel 1** : `Téléchargements de gros fichiers compressés`
+* **Panel 1** : `Telechargements de gros fichiers compresses`
 
 ```spl
 index=proxy_logs uri="*.zip" OR uri="*.rar" OR uri="*.7z" | stats count by src_ip, uri
