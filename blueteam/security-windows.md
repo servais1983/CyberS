@@ -32,8 +32,7 @@ powershell
 Set-NetFirewallProfile -Profile Domain,Public,Private -Enabled True
 🗃️ Activer le chiffrement BitLocker
 powershell
-Copier
-Modifier
+
 Enable-BitLocker -MountPoint "C:" -EncryptionMethod XtsAes256 -UsedSpaceOnlyEncryption
 👥 3. Sécurisation des comptes
 🛡️ Politiques de mot de passe
