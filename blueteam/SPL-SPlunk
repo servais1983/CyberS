@@ -1,0 +1,146 @@
+# SPLUNK SPL COMMANDS - BLUE TEAM & FIDR
+
+## Sommaire
+
+1. [Commandes de base](#commandes-de-base)
+2. [Recherches temporelles](#recherches-temporelles)
+3. [Filtres et conditions](#filtres-et-conditions)
+4. [Statistiques et agrégations](#statistiques-et-agrégations)
+5. [Visualisation](#visualisation)
+6. [Requêtes d'investigation](#requêtes-dinvestigation)
+7. [Recherches sur les logs Windows](#recherches-sur-les-logs-windows)
+8. [Cas d'usage FIDR](#cas-dusage-fidr)
+
+---
+
+## Commandes de base
+
+```spl
+index=<nom_index>                # Spécifie l'index
+sourcetype=<nom_sourcetype>     # Spécifie le type de source
+source=<chemin_source>          # Source spécifique
+host=<nom_hôte>                 # Filtre par hôte
+```
+
+---
+
+## Recherches temporelles
+
+```spl
+index=win_logs earliest=-24h latest=now   # Recherches sur les dernières 24h
+timechart span=1h count by host           # Histogramme horaire par hôte
+```
+
+---
+
+## Filtres et conditions
+
+```spl
+index=firewall action=blocked
+index=windows EventCode=4625 OR EventCode=4624
+index=sysmon (EventCode=1 OR EventCode=3) AND Image="cmd.exe"
+```
+
+---
+
+## Statistiques et agrégations
+
+```spl
+stats count by src_ip
+stats dc(user) by src_ip
+stats avg(response_time) by uri_path
+```
+
+---
+
+## Visualisation
+
+```spl
+timechart count by EventCode
+chart count over dest_ip by action
+```
+
+---
+
+## Requêtes d'investigation
+
+```spl
+# Connexions RDP
+index=windows EventCode=4624 LogonType=10
+
+# Tentatives de bruteforce
+index=windows EventCode=4625 | stats count by user, src_ip
+
+# Processus suspects (Sysmon)
+index=sysmon EventCode=1 | where Image="powershell.exe" OR CommandLine="*Invoke*"
+
+# DNS Tunneling
+index=dns_logs | stats count by query | where like(query, "%\_%")
+
+# Accès anormaux fichiers sensibles
+index=fs_logs path="*confidential*" | stats count by user, file
+```
+
+---
+
+## Recherches sur les logs Windows
+
+```spl
+# Création de compte
+index=windows EventCode=4720
+
+# Suppression de compte
+index=windows EventCode=4726
+
+# Ajout à un groupe admin
+index=windows EventCode=4728 OR EventCode=4732
+
+# Suppression de journaux (potentielle couverture de trace)
+index=windows EventCode=1102
+```
+
+---
+
+## Cas d'usage FIDR
+
+### 1. Exfiltration de données
+
+```spl
+index=proxy_logs uri="*.zip" OR uri="*.rar" OR uri="*.7z" | stats count by src_ip, uri
+```
+
+### 2. Lateral Movement - SMB
+
+```spl
+index=sysmon EventCode=3 DestinationPort=445 | stats count by src_ip, dest_ip
+```
+
+### 3. Exécution de scripts PowerShell
+
+```spl
+index=sysmon EventCode=1 | where Image="powershell.exe" OR CommandLine="*EncodedCommand*"
+```
+
+### 4. Scheduled Tasks malicieux
+
+```spl
+index=windows EventCode=4698 | stats count by TaskName, user
+```
+
+### 5. Beaconing à intervalle régulier
+
+```spl
+index=proxy_logs | timechart span=1m count by src_ip | streamstats avg(count) as avg_count | where count == avg_count
+```
+
+---
+
+**Note :** adaptez les noms d'index et champs à votre environnement Splunk.
+
+---
+
+## Ressources utiles
+
+* [Documentation SPL officielle](https://docs.splunk.com/Documentation/Splunk/latest/SearchReference/Whatsinthismanual)
+* [Cheat Sheet SPL](https://docs.splunk.com/images/e/e8/Splunk_Quick_Reference_Guide.pdf)
+* [Blue Team Cheat Sheets (GitHub)](https://github.com)
