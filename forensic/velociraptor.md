@@ -47,6 +47,9 @@ mv velociraptor-v0.7.1-linux-amd64 velociraptor
 
 ```bash
 ./velociraptor --config velociraptor.config.yaml frontend
+
+ou verbeux .\velociraptor.exe -v --config velociraptor.config.yaml frontend
+
 ```
 
 ---
