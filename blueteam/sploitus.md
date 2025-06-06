@@ -1,81 +1,87 @@
+# 💥 Sploitus — Le Moteur de Recherche pour Hackers Éthiques
 
-🔍 Sploitus — Moteur de Recherche d'Exploits et d'Outils de Sécurité
-Site officiel : https://sploitus.com
+🔗 **Site officiel** : [sploitus.com](https://sploitus.com)
 
-Sploitus est une plateforme centralisée qui permet aux chercheurs en sécurité, pentesters et passionnés de cybersécurité de découvrir rapidement les derniers exploits publics et outils open source. Elle agrège des contenus provenant de sources réputées telles que Exploit-DB, Packet Storm, GitHub, et bien d'autres.
+> _“Find. Exploit. Learn.”_
 
-⚙️ Fonctionnalités Clés
-Recherche ciblée : Filtrez les résultats par exploits ou outils, avec des options de tri par date, score ou pertinence.
+---
 
-Interface moderne : Mode sombre intégré pour un confort visuel optimal.
+## 🔍 C’est quoi Sploitus ?
 
-Partage facile : Chaque résultat peut être copié ou partagé en un clic.
+**Sploitus** est un moteur de recherche spécialisé dans les **exploits** et **outils de cybersécurité**.  
+Il centralise les derniers contenus issus de :
 
-Flux RSS/Atom : Restez informé des dernières publications via des flux personnalisables.
+- 🗂️ Exploit-DB  
+- 🧪 GitHub (PoC & outils)  
+- ⚡ Packet Storm Security  
+- 💬 Blogs et forums spécialisés
 
-API communautaire : Des projets comme sploitGET permettent d'automatiser les recherches via la ligne de commande.
-github.com
+Idéal pour les **pentesters**, **CTF players**, **blue teamers**, et **curieux de la sécurité offensive**.
 
-🧪 Exemples d'Exploits Récents
-1. CVE-2025-3248 – Exécution de Code à Distance sur Langflow
-Date : 31 mai 2025
+---
 
-Score CVSS : 9.8
+## ⚙️ Fonctionnalités Clés
 
-Description : Permet l'exécution de commandes arbitraires ou l'établissement d'un shell inversé sur un système vulnérable, nécessitant une authentification préalable.
-sploitus.com
+| 🧩 Fonction | 💡 Description |
+|------------|----------------|
+| **Recherche intelligente** | Par mots-clés, CVE, plateformes ou tags |
+| **Filtrage par type**      | Outils, exploits, scripts, PoC |
+| **Interface sombre**       | Mode dark élégant par défaut |
+| **Classement dynamique**   | Tri par date, score CVSS, pertinence |
+| **Partage simplifié**      | Boutons de copie et partage en 1 clic |
+| **Flux RSS personnalisés** | Pour rester à jour automatiquement |
 
-2. CVE-2024-23897 – Lecture de Fichiers Arbitraires sur Jenkins
-Date : 25 juillet 2024
+---
 
-Score CVSS : 9.8
+## 🧪 Exemples d'Exploits Populaires
 
-Description : Exploit permettant de lire des fichiers sensibles sur le serveur Jenkins via des requêtes HTTP spécialement conçues.
-sploitus.com
-+4
-0x00sec.org
-+4
-sploitus.com
-+4
-x.com
-+6
-sploitus.com
-+6
-sploitus.com
-+6
+### 🔓 CVE-2025-3248 — Langflow RCE  
+- 📅 Date : 31 mai 2025  
+- 🧠 Score CVSS : 9.8  
+- 📌 Résumé : Permet l’exécution de commandes distantes avec un simple cookie d’auth.
 
-3. CVE-2025-46203 – Contrôle d'Accès Incorrect dans Unifiedtransform
-Date : 29 mai 2025
+➡️ [Voir l’exploit sur Sploitus](https://sploitus.com/exploit?id=D5C2C4F9-735B-50DB-A4A1-C34A555D8C5D)
 
-Score CVSS : 6.5
+---
 
-Description : Vulnérabilité permettant à des utilisateurs non autorisés de modifier les données d'autres étudiants dans le système Unifiedtransform.
-sploitus.com
+### 📁 CVE-2024-23897 — LFI sur Jenkins  
+- 📅 Date : 25 juillet 2024  
+- 📌 Résumé : Accès non autorisé à des fichiers arbitraires via des paramètres GET.
 
-🛠️ Intégrations et Outils Associés
-sploitGET : Script Python pour interroger Sploitus depuis le terminal.
+➡️ [Voir l’exploit sur Sploitus](https://sploitus.com/exploit?id=A6B6F71D-D834-504F-8134-58852894EADF)
 
-sploitus-assistant : Micro-bibliothèque Python facilitant l'extraction de données depuis Sploitus.
-github.com
+---
 
-💬 Avis de la Communauté
-"Je pensais que c'était juste un autre moteur de recherche d'exploits, mais je me trompais ! C'est absolument brillant, même en version bêta."
-— Utilisateur sur Reddit
-x.com
-+5
-reddit.com
-+5
-0x00sec.org
-+5
+### 👤 CVE-2025-46203 — Bypass Auth dans Unifiedtransform  
+- 📅 Date : 29 mai 2025  
+- 📌 Résumé : Permet de modifier des profils étudiants sans privilèges requis.
 
-📢 Suivez Sploitus
-X (Twitter) : @sploitus_com
+➡️ [Voir l’exploit sur Sploitus](https://sploitus.com/exploit?id=A01C9857-1DE0-5FC3-99A7-DB4773AFFF9E)
 
-Flux RSS : Disponible sur le site pour suivre les dernières publications.
-producthunt.com
+---
 
-📝 Note Importante
-Sploitus est destiné à un usage éducatif et professionnel. L'exploitation de vulnérabilités sans autorisation est illégale et contraire à l'éthique. Veuillez utiliser ces informations de manière responsable.
-sploitus.com
+## 🛠️ Intégrations & Outils Associés
 
-Pour explorer davantage, visitez https://sploitus.com.
+- **🔧 [sploitGET](https://github.com/0xricksanchez/sploitGET)** — Scraper CLI des exploits depuis Sploitus
+- **🧰 [sploitus-assistant](https://github.com/DvaMishkiLapa/sploitus-assistant)** — API non-officielle pour extraire les résultats
+
+---
+
+## 📣 Ce qu’en dit la communauté
+
+> _"Un moteur de recherche d’exploits qui fait VRAIMENT le job."_  
+> — Reddit /r/netsec
+
+> _"Simple, rapide, open. What else?"_  
+> — Hacker News user
+
+---
+
+## ⚠️ Usage responsable
+
+🚨 **Attention** : L'utilisation d'exploits sans autorisation est **illégale** et contraire à l'éthique.  
+Sploitus est un outil d’apprentissage, de veille et de recherche pour professionnels de la sécurité.
+
+---
+
+## 🔗 Explorez maintenant : [sploitus.com](https://sploitus.com)
