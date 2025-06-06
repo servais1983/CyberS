@@ -1,68 +1,92 @@
-🔁 Détection par Cycles Successifs
-🧠 Définition
-La détection par cycles successifs consiste à analyser les données ou comportements en plusieurs étapes consécutives (ou itérations), où chaque cycle affine les résultats du précédent. C’est une approche incrémentale et adaptative.
+# 🔁 Détection par Cycles Successifs
 
-🔍 Objectif
-Améliorer la précision de détection (réduction des faux positifs/faux négatifs).
+> _Une méthode incrémentale, contextuelle et adaptative pour affiner la détection des menaces._
 
-Permettre une réaction progressive en fonction du niveau de menace détecté.
+---
 
-Appliquer une logique de filtrage et de corrélation par couches.
+## 🧠 Définition
 
-⚙️ Fonctionnement général
-Cycle 1 – Analyse de base
+La **détection par cycles successifs** consiste à analyser des événements en **plusieurs itérations logiques**, où chaque cycle tire parti des résultats du précédent pour **affiner la compréhension** d'une situation potentiellement anormale.
 
-Collecte initiale des événements
+🔄 C’est une approche **progressive** qui combine filtrage, corrélation, scoring et réponse automatique.
 
-Détection de patterns simples (ex. : signature, règle statique)
+---
 
-Cycle 2 – Corrélation contextuelle
+## 🔍 Objectifs
 
-Association d’événements pour détecter une séquence suspecte
+- 🎯 **Améliorer la précision** (réduction des faux positifs/négatifs)  
+- 🧩 **Réagir de manière graduelle** selon le niveau de menace  
+- 🧠 **Appliquer une logique en couches** (filtrage ➜ corrélation ➜ scoring ➜ réponse)
 
-Analyse comportementale (ex. : fréquence, durée, origine)
+---
 
-Cycle 3 – Détection avancée
+## ⚙️ Fonctionnement en 4 Cycles
 
-Apprentissage machine / scoring de risque
+| 🔢 Cycle | 🧪 Étape | 🔍 But Principal |
+|---------|----------|------------------|
+| **1** | **Analyse de base** | Détection simple via signatures ou règles statiques |
+| **2** | **Corrélation contextuelle** | Regrouper plusieurs signaux pour générer du contexte |
+| **3** | **Détection avancée** | Scoring par IA ou comparaison à des profils historiques |
+| **4** | **Réponse adaptative** | Alerte priorisée + contre-mesures progressives |
 
-Comparaison avec des modèles historiques ou profils utilisateurs
+---
 
-Cycle 4 – Réponse adaptative
+### 🧰 Détail des Cycles
 
-Génération d’alertes avec priorisation
+#### 🔹 Cycle 1 — Analyse de base
+- 📥 Collecte d’événements
+- 📌 Matching sur signatures, règles statiques
 
-Application de contre-mesures graduelles (blocage, isolement, notification)
+#### 🔹 Cycle 2 — Corrélation contextuelle
+- 🔗 Séquences d’événements liées (ex : connexion + échec + changement de device)
+- 👁️‍🗨️ Début d'analyse comportementale
 
-🧩 Exemple d’application
-Contexte : Analyse d’accès utilisateur anormal
-Cycle	Traitement	Action
-1	Détection d'une connexion à 3h du matin	Marquage comme activité rare
-2	Corrélation avec tentative de login échouée	Suspicion renforcée
-3	Analyse du poste utilisé (nouvel appareil inconnu)	Notation de risque élevée
-4	Blocage temporaire + alerte SOC	Réponse automatique
+#### 🔹 Cycle 3 — Détection avancée
+- 🤖 Machine Learning / scoring de risque
+- 📊 Comparaison à des modèles utilisateurs ou historiques
 
-✅ Avantages
-Approche progressive et fine
+#### 🔹 Cycle 4 — Réponse adaptative
+- 🚨 Alerte hiérarchisée
+- 🛡️ Blocage, isolation, notification, selon la gravité
 
-Meilleure gestion des ressources (seuils adaptatifs)
+---
 
-Réduction des faux positifs
+## 🧩 Exemple : Accès Utilisateur Anormal
 
-Facilite l’automatisation intelligente
+| 🔁 Cycle | ⚙️ Traitement | 🚨 Action |
+|---------|----------------|-----------|
+| 1 | Connexion à 3h du matin | Activité marquée comme rare |
+| 2 | Tentative de login échouée liée | Renforcement du niveau de suspicion |
+| 3 | Appareil inconnu détecté | Risque élevé attribué |
+| 4 | Déclenchement d’un blocage temporaire | Alerte SOC générée automatiquement |
 
-❗ Limites
-Nécessite des règles bien calibrées
+---
 
-Délais possibles entre l’incident et la détection finale
+## ✅ Avantages
 
-Complexité d’implémentation dans un SIEM ou XDR
+- ✔️ **Approche graduelle** qui évite la sur-réaction immédiate  
+- 💡 **Meilleure gestion des ressources** (activation sélective)  
+- 🤏 **Réduction des faux positifs** par affinement progressif  
+- 🤖 Compatible avec **l’automatisation intelligente**
 
-🛠️ Bonnes pratiques
-Définir des seuils et critères précis pour chaque cycle
+---
 
-Intégrer des retours du SOC pour améliorer les règles
+## ❗ Limites
 
-Tester régulièrement avec des scénarios réels
+- ⚠️ Requiert des **règles finement calibrées**  
+- ⏳ **Temps de réaction potentiellement plus long**  
+- 🧩 Complexité d'intégration dans un SIEM ou une plateforme XDR
 
-Documenter chaque cycle de détection
+---
+
+## 🛠️ Bonnes Pratiques
+
+- 🎯 Définir des **seuils et critères précis** pour chaque cycle  
+- 🔄 Recueillir les **retours du SOC** pour améliorer les règles  
+- 🧪 Tester avec des **scénarios réalistes et variés**  
+- 📚 **Documenter clairement** chaque cycle, règles et exceptions
+
+---
+
+> 🧠 _“Plus la menace est subtile, plus la détection doit être évolutive.”_
+
