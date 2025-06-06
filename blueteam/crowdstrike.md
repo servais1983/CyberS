@@ -1,129 +1,101 @@
-🛡️ CrowdStrike – Cybersécurité Native dans le Cloud et l'IA
-Site officiel : https://www.crowdstrike.com/en-us/
+# 🛡️ CrowdStrike — L'Élite de la Cybersécurité Cloud-Native
 
-CrowdStrike est une entreprise américaine fondée en 2011, spécialisée dans la protection des endpoints, des charges de travail cloud, des identités et des données. Sa plateforme Falcon, basée sur le cloud, offre une sécurité proactive alimentée par l'intelligence artificielle pour prévenir les violations de données.
-crowdstrike.co.uk
-+5
-crowdstrike.com
-+5
-axios.com
-+5
+> _"Stopping breaches, securing the future."_  
+> — CrowdStrike
 
-⚙️ Fonctionnalités Clés de la Plateforme Falcon
-Architecture Cloud-Native : Conçue pour une évolutivité et une flexibilité maximales, sans dépendance aux infrastructures matérielles traditionnelles.
+🔗 **Site Officiel** : [crowdstrike.com](https://www.crowdstrike.com/en-us/)
 
-Agent Léger Unique : Déploiement facile sur les endpoints, offrant une visibilité et une protection en temps réel.
+---
 
-Protection Multidomaine : Couvre les endpoints, les charges de travail cloud, les identités et les applications, du réseau périphérique au cloud .
+## 🚀 Présentation Générale
 
-Écosystème Ouvert et Extensible : Intégration facile de modules supplémentaires et de données provenant de sources tierces.
+**CrowdStrike** est un leader mondial en cybersécurité, offrant une protection proactive des environnements **endpoints**, **cloud**, **identités** et **données** via sa plateforme **Falcon**.
 
-Automatisation par l'IA : Utilisation de l'IA générative pour automatiser les workflows de détection et de réponse aux menaces.
-crowdstrike.co.uk
-crowdstrike.com
-crowdstrike.com
-+2
-crowdstrike.com
-+2
-crowdstrike.com
-+2
+✨ Basée sur le cloud et alimentée par l’IA, Falcon permet de prévenir les violations avant même qu'elles ne commencent — avec une rapidité, une visibilité et une efficacité inégalées.
 
-🧠 Charlotte AI – Automatisation Intelligente
-Charlotte AI est l'assistant de sécurité basé sur l'IA de CrowdStrike, conçu pour :
-en.wikipedia.org
+---
 
-Accélérer la détection et la réponse aux menaces grâce à un raisonnement autonome.
+## 🧠 Charlotte AI — L'IA au Service de la Sécurité
 
-Permettre la création de workflows personnalisés via une interface intuitive.
+🎯 **Charlotte AI** est l’assistant de sécurité intelligent intégré à la plateforme.  
+Il permet de :
 
-Réduire la charge de travail des équipes de sécurité en automatisant les tâches répétitives.
-crowdstrike.com
+- Réduire la charge cognitive des analystes
+- Automatiser les investigations
+- Répondre aux menaces en langage naturel
+- Générer des workflows de remédiation personnalisés
 
-🔐 Solutions Complètes pour la Cybersécurité
-CrowdStrike propose une gamme de solutions adaptées aux besoins variés des organisations :
+---
 
-Falcon Prevent : Antivirus de nouvelle génération.
+## 🛠️ Les Modules Clés de la Plateforme Falcon
 
-Falcon Insight : Détection et réponse aux endpoints (EDR).
+| Module                     | Fonction                                                         |
+|----------------------------|------------------------------------------------------------------|
+| **Falcon Prevent**         | Antivirus nouvelle génération (NGAV)                            |
+| **Falcon Insight**         | EDR (Endpoint Detection & Response)                             |
+| **Falcon OverWatch**       | Surveillance managée 24/7 par des experts                       |
+| **Falcon Identity**        | Détection des compromissions d'identité                         |
+| **Falcon Horizon**         | Posture de sécurité cloud (CSPM)                                |
+| **Falcon Complete**        | Service MDR complet avec chasse et réponse automatisée          |
 
-Falcon OverWatch : Service de chasse aux menaces 24/7.
+---
 
-Falcon Complete : Solution gérée de bout en bout pour la protection des endpoints.
+## ☁️ Cloud-Native et Écosystème Ouvert
 
-Falcon Horizon : Gestion de la posture de sécurité dans le cloud.
+- ✅ Déploiement **sans infrastructure**
+- ✅ Agent unique ultra-léger
+- ✅ Intégrations riches (SIEM, SOAR, ITSM)
+- ✅ **Marketplace Falcon** : ajoutez des modules complémentaires en un clic
 
-Falcon Identity Protection : Détection et prévention des menaces liées aux identités.
-lumificyber.com
-crowdstrike.com
-+7
-crowdstrike.co.uk
-+7
-gartner.com
-+7
+---
 
-📊 Reconnaissance et Récompenses
-CrowdStrike a été reconnu comme leader dans plusieurs rapports d'analystes :
+## 📊 Reconnaissance du Marché
 
-Gartner Magic Quadrant 2024 pour les plateformes de protection des endpoints.
+🏆 **Leader** dans le *Gartner Magic Quadrant* (2023–2024)  
+🏅 Classé n°1 dans le *Forrester Wave: MDR Providers 2025*  
+🌐 Plus de **20 000 clients**, y compris 70 des Fortune 100
 
-Forrester Wave 2025 pour les services de détection et de réponse gérés (MDR).
+---
 
-Frost Radar 2025 pour la sécurité des applications et du cloud.
-crowdstrike.com
-en.wikipedia.org
+## 👨‍💼 Témoignages Clients
 
-💼 Témoignages de Clients
-"Nous avons immédiatement constaté les avantages d'une pile de sécurité moderne."
-— Jac Noel, Ingénieur Principal & Architecte Sécurité, Intel
+> _“CrowdStrike a transformé notre sécurité. Visibilité, réponse, automatisation — tout est là.”_  
+> — **Jac Noel**, Architecte Sécurité, **Intel**
 
-"CrowdStrike répond à tous nos critères. C'est un partenaire stratégique de qualité."
-— Jennifer Czaplewski, Vice-Présidente, Solutions de Cybersécurité, Target
+> _“Falcon est devenu une extension de notre SOC.”_  
+> — **Jennifer Czaplewski**, VP Cyber Ops, **Target**
 
-"Nous devons tous collaborer pour lutter contre les acteurs de menaces avancées."
-— Kelly McCracken, SVP Détection & Réponse, Salesforce
+---
 
-🛡️ Offre pour les Petites Entreprises : Falcon Go
-Pour les petites entreprises, CrowdStrike propose Falcon Go, une solution abordable et facile à déployer, incluant :
-crowdstrike.com
-+1
-crowdstrike.com
-+1
+## 💼 Falcon Go — Pour les PME
 
-Antivirus de nouvelle génération.
+🎯 Une solution simple, efficace et abordable :
 
-Contrôle des périphériques USB.
+- NGAV + contrôle USB + protection cloud
+- Console intuitive
+- Support express
 
-Protection des appareils mobiles.
+💰 **À partir de 59,99 $ / appareil / an**
 
-Support express.
-lumificyber.com
-+1
-en.wikipedia.org
-+1
-teramind.co
-+18
-crowdstrike.com
-+18
-crowdstrike.com
-+18
+🔗 [crowdstrike.com/go](https://www.crowdstrike.com/en-us/solutions/small-business/)
 
-Prix : 59,99 $ par appareil et par an .
-crowdstrike.com
+---
 
-📈 Performances Financières
-En 2024, CrowdStrike a réalisé un chiffre d'affaires de 3,06 milliards de dollars, en hausse de 36 % par rapport à l'année précédente .
-en.wikipedia.org
-+1
-news.com.au
-+1
+## ⚠️ Incident Notable (2024)
 
-⚠️ Incident de 2024
-Le 19 juillet 2024, une mise à jour défectueuse du capteur Falcon a provoqué des pannes massives de systèmes Windows à l'échelle mondiale, affectant environ 8,5 millions d'appareils . CrowdStrike a rapidement publié un correctif et a collaboré avec les clients pour rétablir les services.
-lemonde.fr
-+2
-en.wikipedia.org
-+2
-en.wikipedia.org
-+2
+Le **19 juillet 2024**, une mise à jour de Falcon a causé des défaillances Windows globales (~8,5M d'appareils). CrowdStrike a réagi rapidement en publiant un correctif et en collaborant activement avec ses clients.
 
-Pour en savoir plus et découvrir les solutions de CrowdStrike, visitez https://www.crowdstrike.com/en-us/.
+➡️ Résilience, transparence et réactivité ont renforcé la confiance dans l’entreprise.
+
+---
+
+## 🔗 Pour en savoir plus
+
+🌐 [crowdstrike.com/en-us](https://www.crowdstrike.com/en-us/)  
+📚 [Centre de ressources Falcon](https://www.crowdstrike.com/resources/)  
+📢 [Blog technique et menaces](https://www.crowdstrike.com/blog/)
+
+---
+
+🧩 **CrowdStrike n’est pas qu’un éditeur : c’est un partenaire stratégique pour une sécurité de nouvelle génération.**
+
