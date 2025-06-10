@@ -9,7 +9,7 @@
 
 *Version 1.0 | Juin 2025*
 
-**Auteur:** Manus AI  
+
 **Destiné aux:** Analystes DFIR, Experts en Cybersécurité, Équipes SOC
 
 </div>
