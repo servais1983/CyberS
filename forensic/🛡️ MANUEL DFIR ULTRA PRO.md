@@ -1600,13 +1600,7 @@ Ce manuel est un document vivant qui s'enrichit grâce aux contributions de la c
 3. **Partager des cas pratiques** - Contribuez avec vos expériences terrain
 4. **Traduire le contenu** - Aidez à rendre le manuel accessible dans d'autres langues
 
-### 📧 Contact
 
-- **Email:** dfir-manual@manus.ai
-- **Site Web:** https://manus.ai/dfir-manual
-- **GitHub:** https://github.com/manus-ai/dfir-ultra-pro-manual
-
----
 
 ## 📊 Statistiques du Manuel
 
