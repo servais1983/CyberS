@@ -59,7 +59,14 @@ CyberS/
 ├── 09-AI-Cybersecurity/  # AI/ML en Cybersécurité
 ├── 10-Tools-Config/      # Configuration d'outils
 ├── 11-Guides/           # Guides & Procédures
-└── 12-Documentation/    # Documentation technique
+├── 12-Documentation/    # Documentation technique
+├── tools/               # Outils de support
+│   ├── interactive_docs/  # Documentation interactive
+│   ├── recommendation/    # Système de recommandation
+│   └── validation/        # Validation de contenu
+├── config/              # Fichiers de configuration
+├── templates/           # Templates pour la documentation
+└── examples/            # Exemples d'utilisation
 ```
 
 ---
@@ -107,16 +114,39 @@ CyberS/
 1. Consultez le [CONTRIBUTING.md](CONTRIBUTING.md)
 2. Explorez les guides dans `/11-Guides/`
 3. Pratiquez avec les ressources de base
+4. Utilisez la documentation interactive pour un apprentissage guidé
 
 ### 🎯 Pour les Professionnels
 - Consultez directement les sections spécialisées
 - Utilisez les cheatsheets et références rapides
 - Adaptez les playbooks à votre environnement
+- Profitez du système de recommandation pour découvrir du contenu pertinent
 
 ### 📖 Guides Recommandés
 - **DFIR Master Guide** - Guide forensique complet
 - **APT Techniques** - Menaces persistantes avancées
 - **Security Hardening Guides** - Sécurisation système
+- **Interactive Documentation** - Documentation interactive avec quiz et visualisations
+
+### 🛠️ Outils de Support
+
+#### Documentation Interactive
+- Génération de documentation interactive avec quiz
+- Visualisations Mermaid pour les diagrammes
+- Blocs de code exécutables
+- Export vers Jupyter Notebooks
+
+#### Système de Recommandation
+- Recommandations personnalisées basées sur le profil
+- Analyse de contenu et extraction de concepts
+- Suivi des interactions utilisateur
+- Statistiques d'apprentissage
+
+#### Validation de Contenu
+- Vérification automatique des métadonnées
+- Validation de la structure des documents
+- Contrôle de qualité des quiz
+- Génération de rapports
 
 ---
 
@@ -147,6 +177,8 @@ CyberS/
 | **Detection** | Sigma, Sysmon, Wazuh | Rules & SIEM |
 | **OSINT** | Maltego, Shodan, TheHarvester | Intelligence Gathering |
 | **Analysis** | Timeline Explorer, Registry Explorer | Artifact Analysis |
+| **Documentation** | Interactive Docs, Mermaid | Documentation Interactive |
+| **Learning** | Recommendation Engine | Recommandations Personnalisées |
 
 ### 📊 **Frameworks de Référence**
 - **MITRE ATT&CK** - Tactics, Techniques & Procedures

@@ -1,0 +1,60 @@
+# Configuration de validation du contenu
+validation:
+  # Règles de structure
+  structure:
+    require_title: true
+    require_sections: true
+    min_sections: 2
+    require_metadata: true
+    require_toc: true
+
+  # Règles de formatage
+  formatting:
+    require_code_blocks: true
+    require_lists: true
+    require_links: true
+    require_images: true
+    max_line_length: 100
+
+  # Règles de métadonnées
+  metadata:
+    required_fields:
+      - title
+      - description
+      - author
+      - date
+      - tags
+      - category
+      - difficulty
+      - status
+
+  # Règles de liens
+  links:
+    check_external: true
+    check_internal: true
+    timeout: 5
+    allowed_domains:
+      - github.com
+      - docs.microsoft.com
+      - mitre.org
+      - owasp.org
+
+  # Règles d'images
+  images:
+    required_format: [".png", ".jpg", ".jpeg", ".svg"]
+    max_size: 1048576  # 1MB
+    require_alt_text: true
+
+  # Règles de code
+  code:
+    require_syntax: true
+    require_comments: true
+    max_complexity: 10
+    require_tests: true
+
+  # Règles de documentation
+  documentation:
+    require_examples: true
+    require_references: true
+    require_diagrams: true
+    require_glossary: true 

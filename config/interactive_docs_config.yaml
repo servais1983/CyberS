@@ -1,0 +1,136 @@
+# Configuration de la documentation interactive
+interactive_docs:
+  # Paramètres de conversion Markdown
+  markdown:
+    extensions:
+      - fenced_code
+      - tables
+      - codehilite
+      - toc
+      - meta
+    codehilite:
+      use_pygments: true
+      style: monokai
+    toc:
+      permalink: true
+      baselevel: 2
+
+  # Paramètres des diagrammes
+  diagrams:
+    mermaid:
+      theme: default
+      securityLevel: loose
+      startOnLoad: true
+    network:
+      layout: spring
+      node_size: 1500
+      font_size: 10
+      node_color: lightblue
+    timeline:
+      height: 400
+      width: 800
+      show_labels: true
+
+  # Paramètres des blocs de code
+  code_blocks:
+    languages:
+      - python
+      - bash
+      - powershell
+    executable: true
+    show_output: true
+    timeout: 30
+    memory_limit: 512
+
+  # Paramètres des quiz
+  quizzes:
+    types:
+      - multiple_choice
+      - true_false
+      - fill_blank
+      - code_challenge
+    scoring:
+      points_per_question: 1
+      passing_score: 70
+    feedback:
+      show_correct: true
+      show_explanation: true
+      allow_retry: true
+
+  # Paramètres des notebooks
+  notebooks:
+    kernel: python3
+    timeout: 300
+    memory_limit: 1024
+    auto_save: true
+    show_output: true
+
+  # Paramètres de visualisation
+  visualization:
+    types:
+      - network
+      - timeline
+      - flowchart
+      - sequence
+      - class
+      - state
+    output_format: png
+    dpi: 300
+    style:
+      background: white
+      font: Arial
+      colors:
+        - "#1f77b4"
+        - "#ff7f0e"
+        - "#2ca02c"
+        - "#d62728"
+        - "#9467bd"
+
+  # Paramètres de template
+  template:
+    theme: light
+    responsive: true
+    navigation: true
+    search: true
+    toc: true
+    breadcrumbs: true
+    edit_link: true
+    last_updated: true
+    tags: true
+    categories: true
+
+  # Paramètres de sécurité
+  security:
+    sanitize_html: true
+    allowed_tags:
+      - p
+      - h1
+      - h2
+      - h3
+      - h4
+      - h5
+      - h6
+      - a
+      - img
+      - code
+      - pre
+      - blockquote
+      - ul
+      - ol
+      - li
+      - table
+      - tr
+      - td
+      - th
+    allowed_attributes:
+      - href
+      - src
+      - alt
+      - title
+      - class
+      - id
+    allowed_protocols:
+      - http
+      - https
+      - mailto
+      - tel 

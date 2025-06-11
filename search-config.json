@@ -1,0 +1,41 @@
+{
+  "searchEngine": {
+    "type": "semantic",
+    "version": "1.0",
+    "settings": {
+      "maxResults": 10,
+      "minRelevance": 0.7,
+      "language": "fr"
+    }
+  },
+  "indexing": {
+    "paths": [
+      "01-OSINT/**/*.md",
+      "02-Digital-Forensics/**/*.md",
+      "03-Blue-Team/**/*.md",
+      "04-Red-Team/**/*.md",
+      "05-Network-Security/**/*.md",
+      "06-Windows-Security/**/*.md",
+      "07-APT/**/*.md",
+      "08-Threat-Intelligence/**/*.md",
+      "09-AI-Cybersecurity/**/*.md",
+      "10-Tools-Config/**/*.md",
+      "11-Guides/**/*.md",
+      "12-Documentation/**/*.md"
+    ],
+    "exclude": [
+      "**/node_modules/**",
+      "**/dist/**",
+      "**/.git/**"
+    ]
+  },
+  "semanticMapping": {
+    "concepts": {
+      "détection": ["monitoring", "logs", "alertes", "siem", "surveillance"],
+      "intrusion": ["attaque", "compromission", "breach", "violation"],
+      "apt": ["menace persistante", "attaque ciblée", "espionnage"],
+      "forensics": ["analyse", "investigation", "preuves", "artefacts"],
+      "sécurité": ["protection", "défense", "sécurisation", "hardening"]
+    }
+  }
+} 

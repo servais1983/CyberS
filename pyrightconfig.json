@@ -1,0 +1,24 @@
+{
+    "include": [
+        "search-engine.py"
+    ],
+    "exclude": [
+        "**/node_modules",
+        "**/__pycache__"
+    ],
+    "ignore": [
+        "search-engine.py"
+    ],
+    "reportMissingImports": false,
+    "reportMissingModuleSource": false,
+    "pythonVersion": "3.8",
+    "pythonPlatform": "Windows",
+    "executionEnvironments": [
+        {
+            "root": ".",
+            "extraPaths": [
+                "."
+            ]
+        }
+    ]
+} 

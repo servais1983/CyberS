@@ -1,0 +1,75 @@
+# Configuration du système de recommandation
+recommendation:
+  # Paramètres de l'analyse de texte
+  text_analysis:
+    max_features: 1000
+    stop_words: english
+    ngram_range: [1, 2]
+    min_df: 2
+    max_df: 0.95
+
+  # Paramètres de similarité
+  similarity:
+    threshold: 0.1
+    max_results: 5
+    min_score: 0.3
+
+  # Paramètres de profil utilisateur
+  user_profile:
+    max_interests: 10
+    interest_decay: 0.1
+    skill_levels:
+      - beginner
+      - intermediate
+      - advanced
+      - expert
+
+  # Catégories de contenu
+  categories:
+    - osint
+    - forensics
+    - red_team
+    - blue_team
+    - threat_intel
+    - ai_security
+    - windows_security
+    - apt
+    - tools
+    - guides
+    - documentation
+
+  # Tags prédéfinis
+  predefined_tags:
+    - windows
+    - linux
+    - network
+    - malware
+    - phishing
+    - social_engineering
+    - cryptography
+    - incident_response
+    - vulnerability
+    - exploit
+    - defense
+    - attack
+    - monitoring
+    - detection
+    - prevention
+    - analysis
+    - investigation
+    - tools
+    - methodology
+    - best_practices
+
+  # Poids des critères de recommandation
+  weights:
+    content_similarity: 0.4
+    user_interests: 0.3
+    difficulty_match: 0.2
+    recency: 0.1
+
+  # Paramètres de mise à jour
+  update:
+    frequency: daily
+    batch_size: 100
+    cache_ttl: 3600  # 1 heure en secondes 
