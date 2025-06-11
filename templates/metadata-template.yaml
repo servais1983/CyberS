@@ -1,0 +1,44 @@
+---
+title: "Titre du Document"
+description: "Description courte et concise du document"
+author: "Nom de l'auteur"
+date: "YYYY-MM-DD"
+last_updated: "YYYY-MM-DD"
+version: "1.0"
+status: "published" # draft, review, published, archived
+
+# Tags principaux
+tags:
+  - beginner # Niveau de difficulté
+  - guide    # Type de contenu
+  - osint    # Domaine de sécurité
+  - published # Statut
+
+# Métadonnées supplémentaires
+category: "Catégorie principale"
+subcategory: "Sous-catégorie"
+difficulty: "beginner" # beginner, intermediate, advanced, expert
+language: "fr"
+read_time: "5 min"
+
+# Relations
+related_documents:
+  - "chemin/vers/document1.md"
+  - "chemin/vers/document2.md"
+
+# Ressources
+resources:
+  - name: "Nom de la ressource"
+    url: "https://url-de-la-ressource"
+    type: "article" # article, video, tool, etc.
+
+# Validation
+reviewed_by:
+  - "Nom du relecteur"
+review_date: "YYYY-MM-DD"
+
+# Licence
+license: "CC BY-NC-SA 4.0"
+---
+
+# Contenu du document ici... 

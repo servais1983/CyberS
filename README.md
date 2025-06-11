@@ -48,15 +48,18 @@
 
 ```
 CyberS/
-├── 🔍 osint/              # Open Source Intelligence
-├── 🔬 forensic/           # Digital Forensics & DFIR
-├── 🛡️ blueteam/          # SOC, Detection & Defense
-├── ⚔️ Pentest&Redteam/    # Offensive Security
-├── 🌐 network/           # Network Security
-├── 🪟 Windows/           # Windows Security
-├── 🔐 cyber-attack-group/ # Threat Actor Intelligence
-├── 🤖 IA/                # AI/ML en Cybersécurité
-└── 📋 Manuelle-perso/    # Guides & Procédures
+├── 01-OSINT/              # Open Source Intelligence
+├── 02-Digital-Forensics/  # Digital Forensics & DFIR
+├── 03-Blue-Team/         # SOC, Detection & Defense
+├── 04-Red-Team/          # Offensive Security
+├── 05-Network-Security/  # Network Security
+├── 06-Windows-Security/  # Windows Security
+├── 07-APT/              # Advanced Persistent Threats
+├── 08-Threat-Intelligence/ # Threat Intelligence
+├── 09-AI-Cybersecurity/  # AI/ML en Cybersécurité
+├── 10-Tools-Config/      # Configuration d'outils
+├── 11-Guides/           # Guides & Procédures
+└── 12-Documentation/    # Documentation technique
 ```
 
 ---
@@ -67,6 +70,7 @@ CyberS/
 - Outils de collecte d'informations
 - Sources de Threat Intelligence
 - Méthodologies d'investigation
+- MITRE ATT&CK Framework
 
 ### 🔬 **Digital Forensics & DFIR**
 - **KAPE** - Artifact collection & parsing
@@ -90,14 +94,19 @@ CyberS/
 - Détection d'intrusions
 - Hardening réseau
 
+### 🤖 **AI & Cybersecurity**
+- Détection basée sur l'IA
+- Analyse prédictive
+- Automatisation de la réponse
+
 ---
 
 ## 🚀 Utilisation
 
 ### 🔰 Pour les Débutants
-1. Commencez par les guides dans `/Manuelle-perso/`
-2. Explorez les outils de base en `/blueteam/`
-3. Pratiquez avec les ressources `/Windows/`
+1. Consultez le [CONTRIBUTING.md](CONTRIBUTING.md)
+2. Explorez les guides dans `/11-Guides/`
+3. Pratiquez avec les ressources de base
 
 ### 🎯 Pour les Professionnels
 - Consultez directement les sections spécialisées
@@ -106,7 +115,7 @@ CyberS/
 
 ### 📖 Guides Recommandés
 - **DFIR Master Guide** - Guide forensique complet
-- **Manuel du Parfait Enquêteur DFIR** - Méthodologies d'investigation
+- **APT Techniques** - Menaces persistantes avancées
 - **Security Hardening Guides** - Sécurisation système
 
 ---
@@ -149,7 +158,7 @@ CyberS/
 
 ## 🤝 Contribution
 
-Les contributions sont encouragées et bienvenues ! 
+Les contributions sont encouragées et bienvenues ! Consultez notre [CONTRIBUTING.md](CONTRIBUTING.md) pour les directives détaillées.
 
 ### 🔄 Comment Contribuer
 
@@ -187,6 +196,6 @@ Ce projet est sous licence MIT. Voir le fichier [LICENSE](LICENSE) pour plus de 
 
 <sub>⭐ **N'hésitez pas à starrer ce repository si vous le trouvez utile !** ⭐</sub>
 
-*Dernière mise à jour: Juin 2025*
+*Dernière mise à jour: Mars 2024*
 
 </div>
