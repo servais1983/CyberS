@@ -4,17 +4,6 @@
 
 <h1 align="center">Exalyze&nbsp;: plateforme d’analyse &amp; de corrélation de malwares</h1>
 
-<p align="center">
-  <a href="https://exalyze.io">
-    <img src="https://img.shields.io/badge/Samples-analysés-155.9K-blue?style=for-the-badge&logo=data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAF0lEQVQoU2NkYGD4z0AEYBxVSFIAAAEQAAH0S4J/AAAAAElFTkSuQmCC" alt="Samples">
-  </a>
-  <a href="https://exalyze.io">
-    <img src="https://img.shields.io/badge/Fonctions-analysées-148M-blueviolet?style=for-the-badge" alt="Functions">
-  </a>
-  <a href="https://docs.exalyze.io/api.html">
-    <img src="https://img.shields.io/badge/API-REST-JSON-%F0%9F%9A%80-green?style=for-the-badge" alt="API">
-  </a>
-</p>
 
 ---
 
