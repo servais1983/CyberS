@@ -1,76 +1,91 @@
-# Exalyze : Plateforme d’analyse et de corrélation de malwares
+<p align="center">
+  <img src="https://exalyze.io/favicon.ico" alt="Exalyze logo" width="110">
+</p>
 
-## Présentation
-Exalyze est une plateforme SaaS qui permet d’analyser, rechercher et apparier des fichiers suspects afin de détecter des malwares au moyen d’algorithmes avancés d’analyse statique et de code. :contentReference[oaicite:0]{index=0}
+<h1 align="center">Exalyze&nbsp;: plateforme d’analyse &amp; de corrélation de malwares</h1>
 
----
-
-## Principales fonctionnalités
-
-### Analyse statique avancée
-- Comparaison **Machoc Hash**  
-- Analyse de la structure du code  
-- Détection d’obfuscation :contentReference[oaicite:1]{index=1}  
-
-### Analyse de code
-- Désassemblage complet des binaires (PE, ELF, .NET, x86/x64)  
-- Reconstruction automatique des fonctions  
-- Détection d’API malveillantes :contentReference[oaicite:2]{index=2}  
-
-### Renseignement sur la menace
-- Identification algorithmique des familles de malwares  
-- Cartographie **MITRE ATT&CK**  
-- Recherche par similarité de code :contentReference[oaicite:3]{index=3}  
-
-#### Boîte à outils d’investigation
-| Outil                       | À quoi ça sert ? |
-|-----------------------------|------------------|
-| **Extraction de séquences** | Traverse les chaînes & appels API pour révéler rapidement les capacités d’un binaire |
-| **Extraction de capacités** | Associe chaque capacité détectée à ses TTP MITRE ATT&CK |
-| **Entropy Map**             | Visualise la structure du binaire (sections packées, chiffrées, etc.) |
-| **Génération YARA**         | Crée en un clic des règles YARA pertinentes |
-| **Analyse de similarité**   | Compare un échantillon à l’intégralité de la base pour trouver des dérivés | :contentReference[oaicite:4]{index=4}  
+<p align="center">
+  <a href="https://exalyze.io">
+    <img src="https://img.shields.io/badge/Samples-analysés-155.9K-blue?style=for-the-badge&logo=data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAF0lEQVQoU2NkYGD4z0AEYBxVSFIAAAEQAAH0S4J/AAAAAElFTkSuQmCC" alt="Samples">
+  </a>
+  <a href="https://exalyze.io">
+    <img src="https://img.shields.io/badge/Fonctions-analysées-148M-blueviolet?style=for-the-badge" alt="Functions">
+  </a>
+  <a href="https://docs.exalyze.io/api.html">
+    <img src="https://img.shields.io/badge/API-REST-JSON-%F0%9F%9A%80-green?style=for-the-badge" alt="API">
+  </a>
+</p>
 
 ---
 
-## Chiffres clés (juin 2025)
-| Indicateur            | Valeur |
-|-----------------------|--------|
+## ✨ Points forts
+
+| | Fonctionnalité | Description |
+| --- | --- | --- |
+| 🔍 | **Analyse statique avancée** | Machoc Hash, structure de code, détection d’obfuscation :contentReference[oaicite:0]{index=0} |
+| 🧩 | **Analyse de code** | Désassemblage complet (PE/ELF/.NET), reconstruction automatique des fonctions, détection d’API malveillantes :contentReference[oaicite:1]{index=1} |
+| 🛰️ | **Renseignement sur la menace** | Identification algorithmique des familles, cartographie MITRE ATT&CK, recherche de similarité de code :contentReference[oaicite:2]{index=2} |
+
+---
+
+## 🛠️ Boîte à outils d’investigation
+
+| 🛠️ Outil | ⚡ À quoi ça sert ? |
+| --- | --- |
+| 🧵 **Extraction de séquences** | Traverse chaînes & appels API pour révéler rapidement les capacités |
+| 🧠 **Extraction de capacités** | Associe chaque capacité détectée à ses TTP MITRE ATT&CK |
+| 📊 **Entropy Map** | Visualise la structure du binaire (sections packées, chiffrées, etc.) |
+| 🛡️ **Génération YARA** | Crée en un clic des règles YARA pertinentes |
+| 🧬 **Analyse de similarité** | Compare un échantillon à la base pour trouver des dérivés :contentReference[oaicite:3]{index=3} |
+
+---
+
+## 📈 Chiffres clés *(juin 2025)*
+
+| Indicateur | Valeur |
+| --- | --- |
 | Échantillons analysés | **155 900 +** |
-| Fonctions analysées   | **148 M** |
-| Fonctions PE          | **114,7 M** |
-| Fonctions ELF         | **4,5 M** | :contentReference[oaicite:5]{index=5}  
+| Fonctions analysées | **148 M** |
+| Fonctions PE | **114,7 M** |
+| Fonctions ELF | **4,5 M** :contentReference[oaicite:4]{index=4} |
 
 ---
 
-## Cas d’usage emblématiques
-- **Mélofée** – détection de variantes Linux APT chinoises  
-- **PlugX** – identification rapide des capacités d’un backdoor historique  
-- **Agent.BTZ / ComRAT** – recherche de variantes russes  
-- **Dark Crystal RAT**, **SysJoker**, **Lambert** – pivot sur des familles complexes à forte évolution :contentReference[oaicite:6]{index=6}  
+## 🚀 Cas d’usage emblématiques
+
+| Malware | 🧩 Ce qu’Exalyze apporte |
+| --- | --- |
+| **Mélofée** | Trouver des variantes Linux d’APT chinoises |
+| **PlugX** | Identifier instantanément les capacités d’un backdoor historique |
+| **Agent.BTZ / ComRAT** | Rechercher des dérivés russes en un clic |
+| **Dark Crystal RAT** | Pivoter sur des familles complexes en évolution |
+| **SysJoker**, **Lambert** | Mettre au jour capacités & similarités en profondeur :contentReference[oaicite:5]{index=5} |
 
 ---
 
-## Démarrage rapide
-1. Glissez-déposez jusqu’à **10 fichiers** (≤ 25 MB chacun)  
-2. Choisissez le niveau de confidentialité : *Public*, *Sensible* ou *Confidentiel*  
-3. Lancez l’analyse et explorez les résultats (structure de code, séquences, similitudes, etc.) :contentReference[oaicite:7]{index=7}  
+## ⚡ Démarrage rapide
+
+1. **Glisser-déposer** jusqu’à *10 fichiers* (≤ 25 MB chacun)  
+2. Choisir le niveau de confidentialité : `Public | Sensitive | Confidential`  
+3. Lancer l’analyse et explorer 📂 structure de code, séquences, similarités, etc. :contentReference[oaicite:6]{index=6}  
 
 ---
 
-## Modèle d’abonnement
-- **Gratuit** : envoi d’échantillons publics, accès aux analyses de base  
-- **Groupes collaboratifs** : chasse en équipe sur des jeux d’échantillons partagés  
-- **Plans privés** : analyse de fichiers sensibles/confidentiels hors partage :contentReference[oaicite:8]{index=8}  
+## 💳 Modèle d’abonnement
+
+| Plan | 🏷️ Tarif | 🤝 Idéal pour |
+| --- | --- | --- |
+| **Gratuit** | 0 € | Soumissions publiques & analyses de base |
+| **Groupes collaboratifs** | Sur devis | Chasse en équipe & partage privé |
+| **Privé / Confidentiel** | Sur devis | Analyse de fichiers sensibles sans partage :contentReference[oaicite:7]{index=7} |
 
 ---
 
-## Ressources
-- Documentation : <https://docs.exalyze.io/>  
-- API REST : <https://docs.exalyze.io/api.html>  
-- Blog Exatrack : <https://blog.exatrack.com>  
-- Compte X (Twitter) : <https://twitter.com/Exalyze_io> :contentReference[oaicite:9]{index=9}  
+## 📚 Ressources
 
----
+- 📄 **Documentation** : <https://docs.exalyze.io/>  
+- 🔌 **API** : <https://docs.exalyze.io/api.html>  
+- 📝 **Blog Exatrack** : <https://blog.exatrack.com>  
+- 🐦 **X (Twitter)** : <https://twitter.com/Exalyze_io>  
 
-> *Exalyze est développé par des analystes malware pour des analystes ; il accélère le reverse engineering sans sacrifier la profondeur technique.*
+> *Développé **par** des analystes malware **pour** des analystes : Exalyze accélère le reverse engineering sans sacrifier la profondeur technique.*
