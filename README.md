@@ -59,7 +59,17 @@ CyberS/
 ├── 09-AI-Cybersecurity/  # AI/ML en Cybersécurité
 ├── 10-Tools-Config/      # Configuration d'outils
 ├── 11-Guides/           # Guides & Procédures
-├── 12-Documentation/    # Documentation technique
+├── docs/                 # Documentation
+│   ├── tools/           # Documentation des outils
+│   │   ├── auto-validation.md
+│   │   ├── content-recommendation.md
+│   │   └── interactive-docs.md
+│   ├── examples/        # Exemples d'utilisation
+│   │   └── interactive_doc_example.md
+│   └── config/          # Configuration
+│       ├── interactive_docs_config.yaml
+│       ├── recommendation_config.yaml
+│       └── validation_config.yaml
 ├── tools/               # Outils de support
 │   ├── interactive_docs/  # Documentation interactive
 │   ├── recommendation/    # Système de recommandation
