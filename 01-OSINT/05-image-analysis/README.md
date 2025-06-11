@@ -1,59 +1,40 @@
-# 🖼️ Image Analysis
+# 📋 Analyse d'Images
 
 ## 📋 Overview
 
-Comprehensive image analysis techniques for OSINT investigations, including reverse image search, metadata extraction, and visual verification.
+Techniques et outils pour l'analyse et l'extraction d'informations à partir d'images.
 
-## 🎯 Core Capabilities
+## 🎯 Objectifs
 
-### 🔄 **Reverse Image Search**
-- Multi-engine searching
-- Similar image identification
-- Source tracking
-- Usage verification
+- **Analyse** - Extraction d'informations
+- **Vérification** - Authentification des images
+- **Documentation** - Guides de référence
+- **Formation** - Développement des compétences
+- **Amélioration** - Évolution continue
 
-### 📊 **Metadata Extraction**
-- EXIF data analysis
-- Geolocation information
-- Camera and device details
-- Timestamp verification
+## 🛠️ Outils & Techniques
 
-### 📍 **Geolocation**
-- Visual landmark identification
-- GPS coordinate extraction
-- Location verification
-- Mapping and visualization
+### Types
+- Métadonnées
+- Recherche inversée
+- Analyse géographique
+- Analyse temporelle
 
-### 👤 **Facial Recognition**
-- Identity verification
-- Cross-platform matching
-- Demographic analysis
-- Privacy considerations
+### Méthodes
+- EXIF
+- Watermarking
+- Compression
+- Manipulation
 
-## 🛠️ Essential Tools
+### Analyse
+- Authenticité
+- Localisation
+- Chronologie
+- Contenu
 
-### Search Engines
-- **TinEye** - Reverse image search
-- **Google Images** - Visual similarity search
-- **Yandex Images** - Advanced facial recognition
-- **Bing Visual Search** - Object and scene recognition
+## 📚 Ressources
 
-### Analysis Tools
-- **ExifTool** - Metadata extraction
-- **InVID** - Video verification
-- **FotoForensics** - Image authenticity analysis
-- **Jeffrey's Image Metadata Viewer** - Online EXIF analysis
-
-## 📚 Techniques
-
-- **Visual verification** - Authenticity assessment
-- **Temporal analysis** - Timeline construction
-- **Comparative analysis** - Image correlation
-- **Enhancement techniques** - Quality improvement
-
-## ⚖️ Ethical Guidelines
-
-- Respect privacy and consent
-- Follow platform policies
-- Maintain evidence integrity
-- Document analysis methods
+- Guides d'analyse
+- Outils de traitement
+- Bases de données
+- Documentation technique

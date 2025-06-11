@@ -1,45 +1,40 @@
-# 🔍 Search Techniques
+# 📋 Techniques de Recherche
 
 ## 📋 Overview
 
-Advanced search methodologies and techniques for effective OSINT operations.
+Techniques et méthodes avancées de recherche d'informations en ligne.
 
-## 🎯 Core Techniques
+## 🎯 Objectifs
 
-### 🔎 **Google Dorking**
-- Advanced search operators
-- Site-specific searches
-- File type filtering
-- Date range queries
+- **Recherche** - Collecte d'informations
+- **Analyse** - Traitement des données
+- **Documentation** - Guides de référence
+- **Formation** - Développement des compétences
+- **Amélioration** - Évolution continue
 
-### 🤖 **API Querying**
-- RESTful API integration
-- Automated data retrieval
-- Rate limiting considerations
-- Authentication methods
+## 🛠️ Outils & Techniques
 
-### 📊 **Boolean Logic**
-- AND/OR/NOT operators
-- Complex query construction
-- Search optimization
-- Result refinement
+### Types
+- Recherche avancée
+- Opérateurs booléens
+- Recherche inversée
+- Métadonnées
 
-### 🕸️ **Web Scraping**
-- Automated data extraction
-- Dynamic content handling
-- Anti-detection techniques
-- Data parsing methods
+### Méthodes
+- Google Dorks
+- Recherche sociale
+- Recherche technique
+- Recherche d'archives
 
-## 📚 Search Strategies
+### Utilisation
+- Collecte
+- Analyse
+- Documentation
+- Validation
 
-- **Keyword research** - Effective term identification
-- **Query building** - Systematic search construction
-- **Result analysis** - Information evaluation
-- **Source validation** - Reliability assessment
+## 📚 Ressources
 
-## 🛠️ Tools
-
-- Search engines and specialized platforms
-- Browser extensions and plugins
-- Command-line utilities
-- Custom scripts and automation
+- Guides de recherche
+- Outils en ligne
+- Bases de données
+- Documentation technique

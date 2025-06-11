@@ -2,38 +2,38 @@
 
 ## 📋 Overview
 
-Passive information gathering techniques and tools for initial target reconnaissance without direct interaction.
+Techniques et outils de collecte passive d'informations pour la reconnaissance initiale de cibles sans interaction directe.
 
-## 🎯 Objectives
+## 🎯 Objectifs
 
-- **Domain enumeration** - Discover subdomains and related domains
-- **Email harvesting** - Collect email addresses and contacts
-- **DNS analysis** - Analyze DNS records and infrastructure
-- **Network mapping** - Identify network ranges and assets
-- **Technology profiling** - Identify technologies and services
+- **Énumération de domaines** - Découverte des sous-domaines et domaines associés
+- **Collecte d'emails** - Récupération d'adresses email et contacts
+- **Analyse DNS** - Analyse des enregistrements DNS et de l'infrastructure
+- **Cartographie réseau** - Identification des plages réseau et des actifs
+- **Profilage technologique** - Identification des technologies et services
 
-## 🛠️ Tools & Techniques
+## 🛠️ Outils & Techniques
 
-### Domain Analysis
-- Subdomain enumeration
-- Certificate transparency logs
-- Historical DNS data
-- WHOIS information
+### Analyse de Domaines
+- Énumération de sous-domaines
+- Logs de transparence des certificats
+- Données DNS historiques
+- Informations WHOIS
 
-### Email Intelligence
-- Email pattern discovery
-- Mailbox validation
-- Email security analysis
-- Contact harvesting
+### Renseignement Email
+- Découverte de motifs d'emails
+- Validation de boîtes mail
+- Analyse de sécurité email
+- Collecte de contacts
 
-### Infrastructure Mapping
-- IP range identification
-- Service enumeration
-- Technology fingerprinting
-- Cloud asset discovery
+### Cartographie d'Infrastructure
+- Identification de plages IP
+- Énumération de services
+- Empreinte technologique
+- Découverte d'actifs cloud
 
-## 📚 Resources
+## 📚 Ressources
 
-- Tool documentation and guides
-- Reconnaissance methodologies
-- Best practices and workflows
+- Documentation et guides d'outils
+- Méthodologies de reconnaissance
+- Bonnes pratiques et workflows

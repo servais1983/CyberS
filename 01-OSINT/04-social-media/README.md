@@ -1,51 +1,40 @@
-# 📱 Social Media Intelligence
+# 📋 Analyse des Réseaux Sociaux
 
 ## 📋 Overview
 
-Social media intelligence gathering techniques, tools, and methodologies for comprehensive social media analysis.
+Techniques et outils pour l'analyse et la collecte d'informations sur les réseaux sociaux.
 
-## 🎯 Platforms Covered
+## 🎯 Objectifs
 
-### 📘 **Facebook**
-- Profile analysis
-- Connection mapping
-- Content timeline
-- Privacy assessment
+- **Collecte** - Récupération d'informations
+- **Analyse** - Traitement des données
+- **Documentation** - Guides de référence
+- **Formation** - Développement des compétences
+- **Amélioration** - Évolution continue
 
-### 🐦 **Twitter/X**
-- Tweet analysis
-- Follower networks
-- Hashtag tracking
-- Sentiment analysis
+## 🛠️ Outils & Techniques
 
-### 💼 **LinkedIn**
-- Professional networks
-- Company intelligence
-- Career tracking
-- Skills assessment
+### Plateformes
+- Facebook
+- Twitter
+- LinkedIn
+- Instagram
 
-### 📸 **Instagram**
-- Visual content analysis
-- Location tracking
-- Story analysis
-- Engagement metrics
+### Méthodes
+- Profils publics
+- Groupes
+- Publications
+- Réseaux
 
-### 🎵 **TikTok**
-- Video content analysis
-- Trend identification
-- User behavior patterns
-- Audio fingerprinting
+### Analyse
+- Relations
+- Activités
+- Comportements
+- Tendances
 
-## 🔍 Analysis Techniques
+## 📚 Ressources
 
-- **Profile investigation** - Comprehensive user analysis
-- **Network mapping** - Connection and relationship analysis
-- **Content analysis** - Post and media examination
-- **Behavioral patterns** - Activity and engagement analysis
-
-## 🛠️ Specialized Tools
-
-- Platform-specific analyzers
-- Cross-platform correlation tools
-- Automation and monitoring solutions
-- Visualization and reporting tools
+- Guides d'analyse
+- Outils de collecte
+- Bases de données
+- Documentation technique

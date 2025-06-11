@@ -1,45 +1,45 @@
-# 📊 Data Sources
+# 📊 Sources de Données
 
 ## 📋 Overview
 
-Comprehensive collection of OSINT data sources, databases, and repositories for intelligence gathering.
+Collection complète de sources de données OSINT, bases de données et dépôts pour la collecte de renseignements.
 
-## 🎯 Categories
+## 🎯 Catégories
 
-### 🏛️ **Public Databases**
-- Government records
-- Corporate filings
-- Academic publications
-- Legal documents
+### 🏛️ **Bases de Données Publiques**
+- Registres gouvernementaux
+- Documents d'entreprises
+- Publications académiques
+- Documents juridiques
 
-### 💥 **Breach Databases**
-- Data leak repositories
-- Credential databases
-- Compromised accounts
-- Historical breaches
+### 💥 **Bases de Données de Fuites**
+- Dépôts de fuites de données
+- Bases de données d'identifiants
+- Comptes compromis
+- Fuites historiques
 
-### 🌐 **Web Archives**
-- Historical website data
-- Cached content
-- Deleted information
-- Timeline analysis
+### 🌐 **Archives Web**
+- Données historiques de sites web
+- Contenu mis en cache
+- Informations supprimées
+- Analyse chronologique
 
-### 📱 **Social Platforms**
-- Social media data
-- Professional networks
-- Forums and communities
-- User-generated content
+### 📱 **Plateformes Sociales**
+- Données de réseaux sociaux
+- Réseaux professionnels
+- Forums et communautés
+- Contenu généré par les utilisateurs
 
-## 🔍 Access Methods
+## 🔍 Méthodes d'Accès
 
-- **Direct access** - Public databases and records
-- **API integration** - Programmatic data retrieval
-- **Web scraping** - Automated data collection
-- **Manual research** - Human-driven investigation
+- **Accès direct** - Bases de données et registres publics
+- **Intégration API** - Récupération programmatique de données
+- **Web scraping** - Collecte automatisée de données
+- **Recherche manuelle** - Investigation pilotée par l'humain
 
-## ⚖️ Legal Considerations
+## ⚖️ Considérations Légales
 
-- Respect data protection laws
-- Follow platform terms of service
-- Maintain ethical standards
-- Document data sources
+- Respecter les lois sur la protection des données
+- Suivre les conditions d'utilisation des plateformes
+- Maintenir des standards éthiques
+- Documenter les sources de données

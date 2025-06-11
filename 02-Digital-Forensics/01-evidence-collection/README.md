@@ -1,8 +1,43 @@
-# 📦 Evidence Collection
+# 📋 Collecte de Preuves
 
 ## 📋 Overview
 
-Properly collecting and preserving digital evidence is the foundation of any successful forensic investigation. This section covers acquisition techniques, tools, and best practices.
+Techniques et procédures pour la collecte et la préservation des preuves numériques.
+
+## 🎯 Objectifs
+
+- **Collecte** - Récupération des preuves
+- **Préservation** - Intégrité des données
+- **Documentation** - Guides de référence
+- **Formation** - Développement des compétences
+- **Amélioration** - Évolution continue
+
+## 🛠️ Outils & Techniques
+
+### Types
+- Disques durs
+- Mémoire vive
+- Réseaux
+- Périphériques
+
+### Méthodes
+- Acquisition
+- Hachage
+- Documentation
+- Transport
+
+### Procédures
+- Préparation
+- Collecte
+- Sécurisation
+- Traçabilité
+
+## 📚 Ressources
+
+- Guides de procédure
+- Outils d'acquisition
+- Templates
+- Documentation technique
 
 ## 🎯 Core Principles
 

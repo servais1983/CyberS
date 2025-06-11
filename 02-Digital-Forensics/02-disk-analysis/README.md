@@ -1,8 +1,43 @@
-# 💽 Disk Analysis
+# 📋 Analyse de Disques
 
 ## 📋 Overview
 
-Disk analysis involves examining storage devices to recover data, analyze file systems, and reconstruct user activities. This is often the most comprehensive part of digital forensics.
+Techniques et outils pour l'analyse forensique des supports de stockage.
+
+## 🎯 Objectifs
+
+- **Analyse** - Examen des données
+- **Récupération** - Extraction des fichiers
+- **Documentation** - Guides de référence
+- **Formation** - Développement des compétences
+- **Amélioration** - Évolution continue
+
+## 🛠️ Outils & Techniques
+
+### Types
+- Systèmes de fichiers
+- Partitions
+- Secteurs
+- Fichiers
+
+### Méthodes
+- Imagerie
+- Analyse
+- Récupération
+- Documentation
+
+### Procédures
+- Préparation
+- Acquisition
+- Analyse
+- Rapport
+
+## 📚 Ressources
+
+- Guides d'analyse
+- Outils forensiques
+- Templates
+- Documentation technique
 
 ## 🗄️ File System Analysis
 

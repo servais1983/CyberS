@@ -1,85 +1,85 @@
-# 🔍 Open Source Intelligence (OSINT)
+# 🔍 Renseignement d'Origine Source Ouverte (OSINT)
 
 ## 📋 Overview
 
-Comprehensive collection of OSINT tools, techniques, and methodologies for intelligence gathering and reconnaissance activities.
+Collection complète d'outils, techniques et méthodologies OSINT pour la collecte de renseignements et les activités de reconnaissance.
 
 ## 🏗️ Structure
 
 ```
 01-OSINT/
-├── 01-reconnaissance/      # Passive information gathering
-├── 02-data-sources/        # OSINT data sources and databases
-├── 03-search-techniques/   # Advanced search methodologies
-├── 04-social-media/        # Social media intelligence
-├── 05-image-analysis/      # Image and visual analysis
-├── 06-verification/        # Information verification tools
-├── 07-frameworks/          # OSINT frameworks and platforms
-└── 99-resources/           # References and additional resources
+├── 01-reconnaissance/      # Collecte passive d'informations
+├── 02-data-sources/        # Sources de données OSINT et bases de données
+├── 03-search-techniques/   # Méthodologies de recherche avancées
+├── 04-social-media/        # Renseignement sur les réseaux sociaux
+├── 05-image-analysis/      # Analyse d'images et visuelle
+├── 06-verification/        # Outils de vérification d'informations
+├── 07-frameworks/          # Cadres et plateformes OSINT
+└── 99-resources/           # Références et ressources complémentaires
 ```
 
-## 🎯 Key Areas
+## 🎯 Domaines Clés
 
 ### 🕵️ **Reconnaissance**
-- Domain enumeration
-- Subdomain discovery
-- Email harvesting
-- DNS analysis
+- Énumération de domaines
+- Découverte de sous-domaines
+- Collecte d'emails
+- Analyse DNS
 
-### 📊 **Data Sources**
-- Public databases
-- Leak databases
-- Government records
-- Commercial sources
+### 📊 **Sources de Données**
+- Bases de données publiques
+- Bases de données de fuites
+- Registres gouvernementaux
+- Sources commerciales
 
-### 🔍 **Search Techniques**
+### 🔍 **Techniques de Recherche**
 - Google dorking
-- Advanced search operators
-- Boolean search strategies
-- API querying
+- Opérateurs de recherche avancés
+- Stratégies de recherche booléennes
+- Requêtes API
 
-### 📱 **Social Media Intelligence**
-- Platform analysis
-- Profile investigation
-- Content verification
-- Network mapping
+### 📱 **Renseignement sur les Réseaux Sociaux**
+- Analyse de plateformes
+- Investigation de profils
+- Vérification de contenu
+- Cartographie de réseaux
 
-### 🖼️ **Image Analysis**
-- Reverse image search
-- Metadata extraction
-- Facial recognition
-- Geolocation techniques
+### 🖼️ **Analyse d'Images**
+- Recherche d'images inversée
+- Extraction de métadonnées
+- Reconnaissance faciale
+- Techniques de géolocalisation
 
-### ✅ **Verification**
-- Fact-checking tools
-- Source verification
-- Content authentication
-- Cross-referencing methods
+### ✅ **Vérification**
+- Outils de fact-checking
+- Vérification de sources
+- Authentification de contenu
+- Méthodes de recoupement
 
-## 🛠️ Essential Tools
+## 🛠️ Outils Essentiels
 
-| Category | Tools | Purpose |
+| Catégorie | Outils | Objectif |
 |----------|-------|----------|
-| **Frameworks** | Maltego, SpiderFoot, TheHarvester | Comprehensive OSINT platforms |
-| **Search** | Google Dorks, Shodan, Censys | Specialized search engines |
-| **Social Media** | Social Links, Twitonomy | Social media analysis |
-| **Images** | TinEye, Yandex Images, InVID | Image verification and analysis |
-| **Data** | Intelligence X, HIBP, Dehashed | Data breach and leak databases |
+| **Frameworks** | Maltego, SpiderFoot, TheHarvester | Plateformes OSINT complètes |
+| **Recherche** | Google Dorks, Shodan, Censys | Moteurs de recherche spécialisés |
+| **Réseaux Sociaux** | Social Links, Twitonomy | Analyse de réseaux sociaux |
+| **Images** | TinEye, Yandex Images, InVID | Vérification et analyse d'images |
+| **Données** | Intelligence X, HIBP, Dehashed | Bases de données de fuites |
 
-## 📚 Learning Resources
+## 📚 Ressources d'Apprentissage
 
-- **OSINT Framework** - Comprehensive tool directory
-- **Bellingcat Toolkit** - Investigation methodologies
-- **SANS OSINT** - Training and certifications
-- **OWASP OSINT** - Security-focused intelligence gathering
+- **OSINT Framework** - Répertoire complet d'outils
+- **Bellingcat Toolkit** - Méthodologies d'investigation
+- **SANS OSINT** - Formation et certifications
+- **OWASP OSINT** - Collecte de renseignements axée sécurité
 
-## ⚖️ Legal & Ethical Considerations
+## ⚖️ Considérations Légales et Éthiques
 
-- **Respect privacy laws** and regulations
-- **Follow terms of service** for platforms and tools
-- **Document sources** and maintain chain of custody
-- **Verify information** before acting on intelligence
+- **Respecter les lois sur la vie privée** et les réglementations
+- **Suivre les conditions d'utilisation** des plateformes et outils
+- **Documenter les sources** et maintenir la chaîne de traçabilité
+- **Vérifier les informations** avant d'agir sur les renseignements
 
 ---
 
-*Use OSINT responsibly and within legal boundaries*
+*Utilisez l'OSINT de manière responsable et dans les limites légales*

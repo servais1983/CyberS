@@ -2,132 +2,91 @@
 
 ## 📋 Overview
 
-Comprehensive digital forensics and incident response (DFIR) resources, tools, and methodologies for investigating cybersecurity incidents and analyzing digital evidence.
+Collection complète d'outils, techniques et méthodologies de forensique numérique pour l'analyse et l'investigation des incidents de sécurité.
 
 ## 🏗️ Structure
 
 ```
 02-Digital-Forensics/
-├── 01-evidence-collection/    # Digital evidence acquisition
-├── 02-disk-analysis/          # Hard drive and file system forensics
-├── 03-memory-analysis/        # RAM and memory forensics
-├── 04-network-forensics/      # Network traffic analysis
-├── 05-mobile-forensics/       # Mobile device investigation
-├── 06-malware-analysis/       # Malicious software analysis
-├── 07-timeline-analysis/      # Event timeline reconstruction
-├── 08-tools-utilities/        # Forensic tools and utilities
-└── 99-resources/              # References and additional resources
+├── 01-evidence-collection/    # Collecte et préservation des preuves
+├── 02-disk-analysis/          # Analyse des disques et systèmes de fichiers
+├── 03-memory-analysis/        # Analyse de la mémoire vive
+├── 04-network-forensics/      # Analyse du trafic réseau
+├── 05-mobile-forensics/       # Analyse des appareils mobiles
+├── 06-malware-analysis/       # Analyse des logiciels malveillants
+├── 07-timeline-analysis/      # Analyse chronologique des événements
+├── 08-tools-utilities/        # Outils et utilitaires
+└── 99-resources/              # Ressources et références
 ```
 
 ## 🎯 Key Areas
 
-### 📦 **Evidence Collection**
-- Disk imaging and acquisition
-- Memory capture techniques
-- Network packet capture
-- Mobile device extraction
-- Cloud forensics
+### 🔍 **Evidence Collection**
+- Acquisition des preuves
+- Chaîne de traçabilité
+- Préservation des données
+- Documentation des procédures
 
-### 💽 **Disk Analysis**
-- File system analysis
-- Deleted file recovery
-- Registry analysis
-- Artifact examination
-- Timeline creation
+### 💾 **Disk Analysis**
+- Analyse des systèmes de fichiers
+- Récupération de données
+- Analyse des partitions
+- Analyse des fichiers supprimés
 
 ### 🧠 **Memory Analysis**
-- Volatility framework
-- Process analysis
-- Network connections
-- Malware detection
-- System state reconstruction
+- Dump de mémoire
+- Analyse des processus
+- Détection de rootkits
+- Analyse des connexions réseau
 
 ### 🌐 **Network Forensics**
-- Packet analysis
-- Protocol examination
-- Traffic reconstruction
-- Intrusion detection
-- Communication analysis
+- Capture de paquets
+- Analyse du trafic
+- Détection d'intrusion
+- Analyse des logs
 
 ### 📱 **Mobile Forensics**
-- iOS investigation
-- Android analysis
-- App data extraction
-- Communication recovery
-- Location tracking
+- Extraction des données mobiles
+- Analyse des applications
+- Analyse des communications
+- Géolocalisation
 
 ### 🦠 **Malware Analysis**
-- Static analysis
-- Dynamic analysis
-- Behavioral analysis
+- Analyse statique
+- Analyse dynamique
 - Reverse engineering
-- IOC extraction
+- Analyse comportementale
+
+### ⏱️ **Timeline Analysis**
+- Reconstruction chronologique
+- Analyse des timestamps
+- Corrélation d'événements
+- Visualisation temporelle
 
 ## 🛠️ Essential Tools
 
 | Category | Tools | Purpose |
 |----------|-------|----------|
-| **Acquisition** | KAPE, FTK Imager, dd, Guymager | Evidence collection |
-| **Analysis** | Autopsy, Sleuth Kit, X-Ways | Disk analysis |
-| **Memory** | Volatility, Rekall, MemProcFS | Memory forensics |
-| **Network** | Wireshark, NetworkMiner, Zeek | Network analysis |
-| **Mobile** | Cellebrite, Oxygen, MSAB | Mobile investigation |
-| **Timeline** | Plaso, Timeline Explorer | Event correlation |
-
-## 📈 DFIR Process
-
-### 1. **Preparation**
-- Tool setup and validation
-- Legal and procedural framework
-- Documentation templates
-- Chain of custody procedures
-
-### 2. **Identification**
-- Incident scope assessment
-- Evidence source identification
-- Priority asset determination
-- Initial impact analysis
-
-### 3. **Collection**
-- Evidence acquisition
-- Hash verification
-- Documentation
-- Chain of custody maintenance
-
-### 4. **Analysis**
-- Artifact examination
-- Timeline reconstruction
-- IOC identification
-- Attribution analysis
-
-### 5. **Reporting**
-- Findings documentation
-- Executive summary
-- Technical analysis
-- Recommendations
+| **Acquisition** | FTK Imager, dd, Guymager | Acquisition des preuves |
+| **Analysis** | Autopsy, EnCase, X-Ways | Analyse forensique |
+| **Memory** | Volatility, Rekall | Analyse de la mémoire |
+| **Network** | Wireshark, NetworkMiner | Analyse réseau |
+| **Mobile** | Cellebrite, Oxygen Forensics | Analyse mobile |
 
 ## 📚 Learning Resources
 
-- **SANS DFIR** - Professional training and certifications
-- **13Cubed** - Digital forensics tutorials
-- **Malware Unicorn** - Reverse engineering workshops
-- **DFIR Community** - Knowledge sharing platform
+- **SANS Digital Forensics** - Formation et certifications
+- **DFIR Training** - Ressources d'apprentissage
+- **Forensic Focus** - Communauté et articles
+- **NIST Guidelines** - Standards et méthodologies
 
-## 🏆 Certifications
+## ⚖️ Legal & Ethical Considerations
 
-- **GCFA** - GIAC Certified Forensic Analyst
-- **GCFE** - GIAC Certified Forensic Examiner
-- **GNFA** - GIAC Network Forensic Analyst
-- **GREM** - GIAC Reverse Engineering Malware
-- **EnCE** - EnCase Certified Examiner
-
-## ⚖️ Legal Considerations
-
-- **Chain of custody** - Evidence integrity
-- **Legal admissibility** - Court requirements
-- **Privacy laws** - Data protection compliance
-- **Documentation standards** - Professional reporting
+- **Respecter la chaîne de traçabilité**
+- **Documenter toutes les actions**
+- **Maintenir l'intégrité des preuves**
+- **Respecter les lois sur la vie privée**
 
 ---
 
-*Digital forensics requires precision, methodology, and continuous learning*
+*Utilisez les techniques de forensique numérique de manière éthique et légale*

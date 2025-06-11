@@ -1,60 +1,40 @@
-# 📚 OSINT Resources
+# 📋 Ressources OSINT
 
 ## 📋 Overview
 
-Comprehensive collection of OSINT references, learning materials, and additional resources.
+Ressources complémentaires et documentation pour les investigations OSINT.
 
-## 🎓 Learning Materials
+## 🎯 Objectifs
 
-### 📖 **Books and Publications**
-- Academic research papers
-- Professional handbooks
-- Case study collections
-- Methodology guides
+- **Documentation** - Guides de référence
+- **Formation** - Développement des compétences
+- **Veille** - Mise à jour des connaissances
+- **Partage** - Collaboration communautaire
+- **Amélioration** - Évolution continue
 
-### 🎥 **Training Resources**
-- Online courses and certifications
-- Video tutorials and webinars
-- Conference presentations
-- Workshop materials
+## 🛠️ Outils & Techniques
 
-### 🌐 **Online Communities**
-- Professional forums
-- Social media groups
-- Academic networks
-- Practitioner communities
+### Types
+- Outils
+- Bases de données
+- Guides
+- Formations
 
-## 🔗 Reference Links
+### Catégories
+- Recherche
+- Analyse
+- Vérification
+- Reporting
 
-### Official Documentation
-- Tool documentation
-- API references
-- Platform guides
-- Technical specifications
+### Utilisation
+- Consultation
+- Formation
+- Implémentation
+- Maintenance
 
-### Research Resources
-- Academic databases
-- Research institutions
-- Think tanks
-- Government publications
+## 📚 Ressources
 
-## 📊 Templates and Checklists
-
-- Investigation templates
-- Verification checklists
-- Reporting formats
-- Process workflows
-
-## ⚖️ Legal and Ethical Resources
-
-- Privacy law references
-- Ethical guidelines
-- Compliance frameworks
-- Best practice guides
-
-## 🔄 Updates and Maintenance
-
-- Resource currency verification
-- Link validation
-- Content updates
-- Community contributions
+- Guides techniques
+- Outils de référence
+- Bases de données
+- Documentation
