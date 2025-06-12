@@ -1,7 +1,7 @@
 # 🎯 Automatisation de la Réponse aux Incidents par IA
 
 <div align="center">
-  <img src="../../assets/logos/ai-response-logo.png" alt="AI Incident Response Logo" width="200"/>
+  
   <br>
   <p><em>L'IA au service de la réponse aux incidents de sécurité</em></p>
 </div>
