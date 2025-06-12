@@ -94,5 +94,5 @@
 - Statut : Actif
 
 <div align="center">
-  <img src="../../assets/logos/apt29-banner.png" alt="APT29 Banner" width="600"/>
+ 
 </div> 
