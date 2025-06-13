@@ -1,7 +1,7 @@
 # Manuel Ultra Complet TheHive
 ## Plateforme Collaborative de Gestion d'Incidents de Cybersécurité
 
-**Auteur :** Manus AI  
+
 **Version :** 1.0  
 **Date :** Juin 2025  
 
