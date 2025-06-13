@@ -1,6 +1,6 @@
 # Manuel Ultra Complet Metasploit Framework
 
-**Auteur:** Manus AI  
+ 
 **Version:** 1.0  
 **Date:** Juin 2025  
 **Pages:** 300+
