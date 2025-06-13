@@ -1,6 +1,5 @@
 # 🔧 Scanner Réseau Bjorn - Dispositif IoT
 
-![Bjorn Scanner](./bjorn-scanner.png)
 
 ## 🧠 Présentation
 
